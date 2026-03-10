@@ -27,6 +27,7 @@ export default function Home() {
   const [feedbackText, setFeedbackText] = useState("");
   const [feedbackSending, setFeedbackSending] = useState(false);
   const [feedbackSent, setFeedbackSent] = useState(false);
+  const [feedbackError, setFeedbackError] = useState<string | null>(null);
   const [copiedField, setCopiedField] = useState<"alias" | "id" | null>(null);
   const [selectedCats, setSelectedCats] = useState<Set<string>>(new Set(["generales"]));
   const [onlyWithImages, setOnlyWithImages] = useState(false);
@@ -535,26 +536,44 @@ export default function Home() {
         <>
           <div
             className="fixed inset-0 z-[60] bg-black/40"
-            onClick={() => !feedbackSending && setFeedbackOpen(false)}
+            onClick={() => {
+              if (!feedbackSending) {
+                setFeedbackOpen(false);
+                setFeedbackError(null);
+              }
+            }}
             aria-hidden
           />
           <div className="fixed bottom-0 left-0 right-0 z-[70] max-h-[70vh] overflow-y-auto rounded-t-2xl bg-white p-6 shadow-xl">
             <div className="mb-4 flex items-center justify-between">
               <h3 className="text-lg font-semibold text-stone-900">Сообщить о проблеме</h3>
               <button
-                onClick={() => !feedbackSending && setFeedbackOpen(false)}
+                onClick={() => {
+                  if (!feedbackSending) {
+                    setFeedbackOpen(false);
+                    setFeedbackError(null);
+                  }
+                }}
                 className="rounded p-1 text-stone-500 hover:bg-stone-100"
               >
                 ✕
               </button>
             </div>
             {feedbackSent ? (
-              <p className="py-8 text-center text-green-700 font-medium">Спасибо!</p>
+              <p className="py-8 text-center text-green-700 font-medium">Спасибо! Сообщение отправлено.</p>
             ) : (
               <>
+                {feedbackError && (
+                  <p className="mb-4 rounded-lg bg-red-50 px-3 py-2 text-sm text-red-700">
+                    {feedbackError}
+                  </p>
+                )}
                 <textarea
                   value={feedbackText}
-                  onChange={(e) => setFeedbackText(e.target.value)}
+                  onChange={(e) => {
+                    setFeedbackText(e.target.value);
+                    setFeedbackError(null);
+                  }}
                   placeholder="Опишите проблему…"
                   rows={4}
                   className="mb-4 w-full rounded-lg border border-stone-200 px-3 py-2 text-stone-900 placeholder:text-stone-400"
@@ -565,6 +584,7 @@ export default function Home() {
                   onClick={async () => {
                     if (!feedbackText.trim()) return;
                     setFeedbackSending(true);
+                    setFeedbackError(null);
                     try {
                       const res = await fetch("/api/feedback", {
                         method: "POST",
@@ -579,7 +599,11 @@ export default function Home() {
                           setFeedbackOpen(false);
                           setFeedbackSent(false);
                         }, 1500);
+                      } else {
+                        setFeedbackError("Ошибка отправки. Попробуйте позже.");
                       }
+                    } catch {
+                      setFeedbackError("Ошибка сети. Проверьте интернет и попробуйте снова.");
                     } finally {
                       setFeedbackSending(false);
                     }
