@@ -22,21 +22,21 @@ MAX_IMAGE_X_FOR_CONTENT = 200  # левее — контентное изобр�
 DEBUG_IMAGE_BINDING = os.environ.get("DEBUG_IMAGES") == "1"  # id, page, image path
 
 # Категории по номерам страниц PDF (1-based)
-# Base: 1–52, A: 53–76, B: 77–94, C/G/E: 95–106, D: 107+
+# Generales: 2–52, A: 53–76, B: 77–94, C/E: 95–105, D: 106–123
 def get_categories_for_page(pdf_page_1based: int) -> list[str]:
     """Вернуть категории по номеру страницы PDF (1-based)."""
     p = pdf_page_1based
-    if 1 <= p <= 52:
-        return ["base"]
+    if 2 <= p <= 52:
+        return ["generales"]
     if 53 <= p <= 76:
         return ["A"]
     if 77 <= p <= 94:
         return ["B"]
-    if 95 <= p <= 106:
-        return ["C", "G", "E"]
-    if p >= 107:
+    if 95 <= p <= 105:
+        return ["C", "E"]
+    if 106 <= p <= 123:
         return ["D"]
-    return ["base"]
+    return ["generales"]
 
 
 def find_pdf() -> Path:

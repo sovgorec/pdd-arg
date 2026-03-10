@@ -8,7 +8,7 @@ import { useStorage } from "@/hooks/useStorage";
 import { shuffle } from "@/lib/fisherYates";
 
 type Lang = "es" | "ru";
-const CATEGORIES = ["base", "A", "B", "C", "D", "E", "G"] as const;
+const CATEGORIES = ["generales", "A", "B", "C", "D", "E"] as const;
 
 export default function Home() {
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -22,7 +22,7 @@ export default function Home() {
   const [answered, setAnswered] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
   const [filterOpen, setFilterOpen] = useState(false);
-  const [selectedCats, setSelectedCats] = useState<Set<string>>(new Set(["base"]));
+  const [selectedCats, setSelectedCats] = useState<Set<string>>(new Set(["generales"]));
   const [onlyWithImages, setOnlyWithImages] = useState(false);
   const [onlyErrors, setOnlyErrors] = useState(false);
   const [examMode, setExamMode] = useState(false);
@@ -121,8 +121,8 @@ export default function Home() {
 
   const catLabel = (q: Question) => {
     const cats = q.categories || [];
-    if (cats.includes("base") && cats.length === 1) return "Base";
-    const main = cats.find((c) => c !== "C" && c !== "G" && c !== "E") || cats[0];
+    if (cats.includes("generales") && cats.length === 1) return "Generales";
+    const main = cats.find((c) => c !== "C" && c !== "E") || cats[0];
     return CATEGORY_LABELS[main] || main;
   };
 

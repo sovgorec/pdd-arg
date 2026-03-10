@@ -11,7 +11,7 @@
     "image": null,
     "page": 3,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Согласно последним статистическим данным Обсерватории дорожного движения города Буэнос-Айреса, какая возрастная группа имеет наибольшее количество пострадавших и смертельных случаев в дорожно-транспортных происшествиях?",
     "answers_ru": {
@@ -32,7 +32,7 @@
     "image": null,
     "page": 3,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Согласно последним статистическим данным Обсерватории дорожного движения города Буэнос-Айреса, самая высокая смертность среди участников дорожного движения (после пешеходов) наблюдается у пользователей:",
     "answers_ru": {
@@ -53,7 +53,7 @@
     "image": null,
     "page": 3,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Всемирная организация здравоохранения утверждает, что риск на общих дорогах возникает в результате различных факторов. Какие это факторы?",
     "answers_ru": {
@@ -74,7 +74,7 @@
     "image": null,
     "page": 3,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какому фактору подвержено большинство дорожно-транспортных происшествий?",
     "answers_ru": {
@@ -95,7 +95,7 @@
     "image": null,
     "page": 3,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "С целью повышения собственной безопасности и безопасности других, на что следует обращать внимание во время движения?",
     "answers_ru": {
@@ -116,7 +116,7 @@
     "image": null,
     "page": 4,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что такое инцидент на дороге или дорожный инцидент?",
     "answers_ru": {
@@ -137,7 +137,7 @@
     "image": null,
     "page": 4,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "О чем идет речь в \"Программе Ноль Видимости\", созданной в 1997 году в Швеции?",
     "answers_ru": {
@@ -158,7 +158,7 @@
     "image": null,
     "page": 4,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "\"Каждый пользователь общественной дороги отвечает за часть дорожного движения.\"Правильна ли эта посылка?",
     "answers_ru": {
@@ -179,7 +179,7 @@
     "image": null,
     "page": 4,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "\"Как пользователи общественной дороги мы обязаны не препятствовать незаслуженно движению и не создавать опасность, ущерб или ненужные неудобства людям или повреждения имуществу.\"Правильна ли эта посылка?",
     "answers_ru": {
@@ -200,7 +200,7 @@
     "image": null,
     "page": 4,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Помимо причинения смертельных случаев или тяжелых травм, какие еще последствия может вызвать дорожное происшествие?",
     "answers_ru": {
@@ -221,7 +221,7 @@
     "image": null,
     "page": 4,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Каждый пользователь общественного транспорта должен, как базовый принцип…",
     "answers_ru": {
@@ -242,7 +242,7 @@
     "image": null,
     "page": 5,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какой закон регулирует движение по городу Буэнос-Айресу?",
     "answers_ru": {
@@ -263,7 +263,7 @@
     "image": null,
     "page": 5,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что понимается под Устойчивой Мобильностью?",
     "answers_ru": {
@@ -284,7 +284,7 @@
     "image": null,
     "page": 5,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Каковы два основных принципа любой транспортной системы в мире?",
     "answers_ru": {
@@ -305,7 +305,7 @@
     "image": null,
     "page": 5,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Укажите, какое утверждение правильное:",
     "answers_ru": {
@@ -326,7 +326,7 @@
     "image": "/images/q_20.png",
     "page": 5,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Укажите, какая из следующих ситуаций связана с наибольшей вероятностью аварийности",
     "answers_ru": {
@@ -347,7 +347,7 @@
     "image": "/images/q_21.png",
     "page": 5,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Укажите, какая из следующих ситуаций связана с наибольшей вероятностью аварийности",
     "answers_ru": {
@@ -368,7 +368,7 @@
     "image": null,
     "page": 5,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Укажите, какое утверждение верно:",
     "answers_ru": {
@@ -389,7 +389,7 @@
     "image": null,
     "page": 5,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какой из следующих вариантов представляет пользователей дороги, упорядоченных от более уязвимых к менее уязвимым?",
     "answers_ru": {
@@ -410,7 +410,7 @@
     "image": null,
     "page": 6,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какому виду транспорта соответствуют все следующие преимущества: экологичность, здоровье, экономичность и скорость?",
     "answers_ru": {
@@ -431,7 +431,7 @@
     "image": "/images/q_25.png",
     "page": 6,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Рекомендуется ли ездить на велосипеде таким образом?",
     "answers_ru": {
@@ -452,7 +452,7 @@
     "image": "/images/q_26.png",
     "page": 6,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что касается вашей одежды, какой из двух велосипедистов имеет меньший риск стать жертвой дорожно-транспортного происшествия?",
     "answers_ru": {
@@ -473,7 +473,7 @@
     "image": "/images/q_27.png",
     "page": 6,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Можно ли ездить на велосипеде по этой дороге?",
     "answers_ru": {
@@ -494,7 +494,7 @@
     "image": null,
     "page": 6,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что следует избегать при езде на велосипеде?",
     "answers_ru": {
@@ -515,7 +515,7 @@
     "image": null,
     "page": 6,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Разрешено ли перевозить груз на велосипеде?",
     "answers_ru": {
@@ -536,7 +536,7 @@
     "image": null,
     "page": 6,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Велосипедисту разрешено брать пассажира?",
     "answers_ru": {
@@ -557,7 +557,7 @@
     "image": "/images/q_31.png",
     "page": 7,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Разрешено ли парковать велосипед в этом месте?",
     "answers_ru": {
@@ -578,7 +578,7 @@
     "image": null,
     "page": 7,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Ребенок до 12 лет может кататься на велосипеде по…",
     "answers_ru": {
@@ -599,7 +599,7 @@
     "image": null,
     "page": 7,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какова максимальная разрешенная скорость для езды на велосипеде с электрической помощью?",
     "answers_ru": {
@@ -620,7 +620,7 @@
     "image": "/images/q_34.png",
     "page": 7,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какое боковое расстояние нужно оставить относительно этого велосипедиста, если вы хотите его обогнать?",
     "answers_ru": {
@@ -641,7 +641,7 @@
     "image": null,
     "page": 7,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Где должны передвигаться велосипедисты на этой улице?",
     "answers_ru": {
@@ -662,7 +662,7 @@
     "image": null,
     "page": 7,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "По какому участку улицы без разметки должны передвигаться велосипедисты, когда нет велодорожек или велосистем?",
     "answers_ru": {
@@ -683,7 +683,7 @@
     "image": null,
     "page": 7,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Где разрешено движение велосипедистам старше 12 лет?",
     "answers_ru": {
@@ -704,7 +704,7 @@
     "image": "/images/q_38.png",
     "page": 8,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что указывает этот знак?",
     "answers_ru": {
@@ -725,7 +725,7 @@
     "image": "/images/q_39.png",
     "page": 8,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что указывает этот знак?",
     "answers_ru": {
@@ -746,7 +746,7 @@
     "image": "/images/q_40.png",
     "page": 8,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что обозначает этот знак?",
     "answers_ru": {
@@ -767,7 +767,7 @@
     "image": "/images/q_41.png",
     "page": 8,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Если вы собираетесь пересечь этот перекресток, на какую сторону нужно смотреть?",
     "answers_ru": {
@@ -788,7 +788,7 @@
     "image": "/images/q_42.png",
     "page": 8,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Может ли этот велосипед с электрическим педальным приводом (электровелосипед) двигаться по этой полосе?",
     "answers_ru": {
@@ -809,7 +809,7 @@
     "image": "/images/q_43.png",
     "page": 8,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В данной ситуации правильно ли, чтобы транспортное средство двигалось вперед?",
     "answers_ru": {
@@ -830,7 +830,7 @@
     "image": "/images/q_47.png",
     "page": 9,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В данной ситуации, какое поведение вы должны принять как водитель?",
     "answers_ru": {
@@ -851,7 +851,7 @@
     "image": "/images/q_48.png",
     "page": 9,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Если вы водитель транспортного средства, какое поведение вы должны принять в следующей ситуации?",
     "answers_ru": {
@@ -872,7 +872,7 @@
     "image": "/images/q_49.png",
     "page": 9,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "На этом перекрестке, кто имеет преимущество проезда?",
     "answers_ru": {
@@ -893,7 +893,7 @@
     "image": null,
     "page": 10,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Когда нет разметки пешеходного перехода, где должны переходить пешеходы?",
     "answers_ru": {
@@ -914,7 +914,7 @@
     "image": "/images/q_51.png",
     "page": 10,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Как водитель, вы видите, что этот свет мигает, что вы должны ожидать, что сделает пешеход?",
     "answers_ru": {
@@ -935,7 +935,7 @@
     "image": "/images/q_52.png",
     "page": 10,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какие транспортные средства могут двигаться по полосе, отмеченной на изображении?",
     "answers_ru": {
@@ -956,7 +956,7 @@
     "image": "/images/q_53.png",
     "page": 10,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Кроме автобусов, кто может передвигаться по этой полосе?",
     "answers_ru": {
@@ -977,7 +977,7 @@
     "image": "/images/q_54.png",
     "page": 10,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Может ли дорожная полиция задержать водительские права водителя транспортного средства, которое не является автобусом или служебным, за то, что он передвигается по этой полосе?",
     "answers_ru": {
@@ -998,7 +998,7 @@
     "image": "/images/q_55.png",
     "page": 10,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что означает горизонтальный знак красного цвета, который обозначен на проезжей части?",
     "answers_ru": {
@@ -1019,7 +1019,7 @@
     "image": "/images/q_56.png",
     "page": 11,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что означает горизонтальный знак, который обозначен на проезжей части?",
     "answers_ru": {
@@ -1040,7 +1040,7 @@
     "image": null,
     "page": 11,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что такое эксклюзивные полосы?",
     "answers_ru": {
@@ -1061,7 +1061,7 @@
     "image": "/images/q_58.png",
     "page": 11,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Автомобиль, обозначенный красным кругом, имеет право повернуть направо на следующем перекрестке?",
     "answers_ru": {
@@ -1082,7 +1082,7 @@
     "image": "/images/q_59.png",
     "page": 11,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что означает горизонтальная разметка, видимая на изображении?",
     "answers_ru": {
@@ -1103,7 +1103,7 @@
     "image": "/images/q_60.png",
     "page": 11,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что указывает горизонтальная разметка, видимая на изображении?",
     "answers_ru": {
@@ -1124,7 +1124,7 @@
     "image": "/images/q_61.png",
     "page": 11,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Следующее изображение соответствует:",
     "answers_ru": {
@@ -1145,7 +1145,7 @@
     "image": "/images/q_62.png",
     "page": 12,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Горизонтальные вмешательства, обозначенные на дороге, служат для…",
     "answers_ru": {
@@ -1166,7 +1166,7 @@
     "image": "/images/q_63.png",
     "page": 12,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Как называется желтое вмешательство, отображенное на изображении?",
     "answers_ru": {
@@ -1187,7 +1187,7 @@
     "image": "/images/q_64.png",
     "page": 12,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какова цель желтой горизонтальной разметки, отображенной на изображении?",
     "answers_ru": {
@@ -1208,7 +1208,7 @@
     "image": "/images/q_67.png",
     "page": 12,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что указывает следующий зеленый перекресток на пересечениях?",
     "answers_ru": {
@@ -1229,7 +1229,7 @@
     "image": "/images/q_68.png",
     "page": 13,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что обозначает эта зеленая горизонтальная разметка?",
     "answers_ru": {
@@ -1250,7 +1250,7 @@
     "image": "/images/q_69.png",
     "page": 13,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какое из следующих изображений показывает велодорожку?",
     "answers_ru": {
@@ -1271,7 +1271,7 @@
     "image": "/images/q_70.png",
     "page": 13,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какая из следующих иллюстраций показывает велодорожку?",
     "answers_ru": {
@@ -1292,7 +1292,7 @@
     "image": null,
     "page": 13,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В чем основное отличие между велосипедными дорожками и велодорожками?",
     "answers_ru": {
@@ -1313,7 +1313,7 @@
     "image": null,
     "page": 13,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что такое велодорожка?",
     "answers_ru": {
@@ -1334,7 +1334,7 @@
     "image": null,
     "page": 13,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В случае аварии рекомендуемый порядок действий таков…",
     "answers_ru": {
@@ -1355,7 +1355,7 @@
     "image": null,
     "page": 13,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какова цель Технической Автомобильной Проверки?",
     "answers_ru": {
@@ -1376,7 +1376,7 @@
     "image": null,
     "page": 14,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В случае участия в дорожном происшествии, сколько времени у вас есть для уведомления страховой компании о происшествии?",
     "answers_ru": {
@@ -1397,7 +1397,7 @@
     "image": null,
     "page": 14,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В случае участия в дорожном происшествии, что рекомендуется сделать в первую очередь?",
     "answers_ru": {
@@ -1418,7 +1418,7 @@
     "image": null,
     "page": 14,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Каковы номера экстренных служб, которые должен знать каждый пользователь общественных дорог, чтобы позвонить и запросить помощь в случае какого-либо инцидента?",
     "answers_ru": {
@@ -1439,7 +1439,7 @@
     "image": null,
     "page": 14,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В случае участия в дорожном происшествии желательно, чтобы тот, кто звонит по телефону в службу экстренной помощи (107), четко указал:",
     "answers_ru": {
@@ -1460,7 +1460,7 @@
     "image": null,
     "page": 14,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какие обязательства накладывает закон на водителя, участвующего в происшествии?",
     "answers_ru": {
@@ -1481,7 +1481,7 @@
     "image": null,
     "page": 14,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В вопросах гражданской ответственности, что считается определяющим фактором для начала иска?",
     "answers_ru": {
@@ -1502,7 +1502,7 @@
     "image": null,
     "page": 15,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "При инциденте на дороге, может ли уголовная ответственность водителя транспортного средства быть передана владельцу?",
     "answers_ru": {
@@ -1523,7 +1523,7 @@
     "image": null,
     "page": 15,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В инциденте на дороге, что означает, что водитель считается ответственным за неосторожность?",
     "answers_ru": {
@@ -1544,7 +1544,7 @@
     "image": null,
     "page": 15,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "При контроле дорожного движения в CABA, если инспектор нарушает правила, исходя из действия водителя, где можно произвести оплату штрафа за это нарушение?",
     "answers_ru": {
@@ -1565,7 +1565,7 @@
     "image": null,
     "page": 15,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "С истекшей лицензией, как долго можно продолжать водить без нарушения?",
     "answers_ru": {
@@ -1586,7 +1586,7 @@
     "image": null,
     "page": 15,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В случае выявления нарушения, может ли работник дорожной службы задержать водительские права?",
     "answers_ru": {
@@ -1607,7 +1607,7 @@
     "image": null,
     "page": 15,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Когда истекает срок действия водительских прав, сколько времени может пройти до их продления, прежде чем их нужно будет оформлять как новые?",
     "answers_ru": {
@@ -1628,7 +1628,7 @@
     "image": null,
     "page": 15,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В случае потери номерного знака автомобиля, где можно запросить его замену?",
     "answers_ru": {
@@ -1649,7 +1649,7 @@
     "image": null,
     "page": 16,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Местоположение и положение номерных знаков автомобиля могут подвергаться каким-либо изменениям?",
     "answers_ru": {
@@ -1670,7 +1670,7 @@
     "image": "/images/q_93.png",
     "page": 16,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какой из следующих вариантов напрямую связан с предотвращением и снижением дорожных происшествий?",
     "answers_ru": {
@@ -1691,7 +1691,7 @@
     "image": null,
     "page": 16,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В чем заключается Система постоянной оценки водителей (Scoring)?",
     "answers_ru": {
@@ -1712,7 +1712,7 @@
     "image": null,
     "page": 16,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Употребление какого из этих веществ может повлиять на способность управлять автомобилем?",
     "answers_ru": {
@@ -1733,7 +1733,7 @@
     "image": null,
     "page": 16,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Человек, управляющий автомобилем под воздействием наркотиков...",
     "answers_ru": {
@@ -1754,7 +1754,7 @@
     "image": null,
     "page": 16,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какое из этих веществ может негативно повлиять на способность управлять автомобилем?",
     "answers_ru": {
@@ -1775,7 +1775,7 @@
     "image": null,
     "page": 16,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Употребление лекарств, может ли это повлиять на способность управлять автомобилем?",
     "answers_ru": {
@@ -1796,7 +1796,7 @@
     "image": null,
     "page": 16,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Когда вы употребляете алкоголь, могут ли произойти изменения в зрении?",
     "answers_ru": {
@@ -1817,7 +1817,7 @@
     "image": null,
     "page": 17,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "После прекращения употребления алкоголя, что происходит с концентрацией алкоголя в организме?",
     "answers_ru": {
@@ -1838,7 +1838,7 @@
     "image": null,
     "page": 17,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Вождение на следующий день после ночи чрезмерного употребления алкоголя рискованно, потому что:",
     "answers_ru": {
@@ -1859,7 +1859,7 @@
     "image": null,
     "page": 17,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Есть ли у похмелья эффекты на организм, которые могут повлиять на вождение?",
     "answers_ru": {
@@ -1880,7 +1880,7 @@
     "image": null,
     "page": 17,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Опасно ли управлять автотранспортом с похмелья?",
     "answers_ru": {
@@ -1901,7 +1901,7 @@
     "image": null,
     "page": 17,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Если водитель легкового автомобиля получает следующий результат на контроль алкоголя, проведенный в Автономном городе Буэнос-Айрес, как должны действовать органы дорожного контроля?",
     "answers_ru": {
@@ -1922,7 +1922,7 @@
     "image": "/images/q_107.png",
     "page": 17,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Если водитель автомобиля отказывается пройти этот тест, является ли это правонарушением?",
     "answers_ru": {
@@ -1943,7 +1943,7 @@
     "image": null,
     "page": 18,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В случае отказа водителя пройти тест на алкоголь, может ли контролирующий агент запретить ему продолжать вождение?",
     "answers_ru": {
@@ -1964,7 +1964,7 @@
     "image": null,
     "page": 18,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Если вы собираетесь управлять автомобилем в течение длительного времени, рекомендуется поспать в ночь перед этим...",
     "answers_ru": {
@@ -1985,7 +1985,7 @@
     "image": null,
     "page": 18,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Быть бодрствующим в течение 17 часов вызывает такой же уровень реакции, как у человека с уровнем алкоголя в крови выше разрешенного законом?",
     "answers_ru": {
@@ -2006,7 +2006,7 @@
     "image": null,
     "page": 18,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Усталость может быть вызвана употреблением:",
     "answers_ru": {
@@ -2027,7 +2027,7 @@
     "image": null,
     "page": 18,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какие из этих симптомов сигнализируют о疲惫и во время вождения?",
     "answers_ru": {
@@ -2048,7 +2048,7 @@
     "image": null,
     "page": 18,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Почему опасно водить в усталом состоянии?",
     "answers_ru": {
@@ -2069,7 +2069,7 @@
     "image": null,
     "page": 18,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Каковы последствия вождения после недостаточного сна?",
     "answers_ru": {
@@ -2090,7 +2090,7 @@
     "image": null,
     "page": 18,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Чтобы избежать или отложить появление усталости, рекомендуется, чтобы водитель:",
     "answers_ru": {
@@ -2111,7 +2111,7 @@
     "image": null,
     "page": 18,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Может ли негативно повлиять на вождение, если пассажир начинает спорить с водителем или с другим человеком на дороге?",
     "answers_ru": {
@@ -2132,7 +2132,7 @@
     "image": null,
     "page": 19,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Под воздействием стресса вождение становится:",
     "answers_ru": {
@@ -2153,7 +2153,7 @@
     "image": null,
     "page": 19,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Каково среднее время реакции водителя от момента восприятия опасности до нажатия на тормоза?",
     "answers_ru": {
@@ -2174,7 +2174,7 @@
     "image": "/images/q_120.png",
     "page": 19,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Во время этой ситуации, рискованно ли водителю использовать мобильный телефон?",
     "answers_ru": {
@@ -2195,7 +2195,7 @@
     "image": null,
     "page": 19,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какой из этих телефонных систем связи не считается рисковым во время вождения автомобиля?",
     "answers_ru": {
@@ -2216,7 +2216,7 @@
     "image": "/images/q_122.png",
     "page": 19,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Следующее действие водителя считается фактором риска?",
     "answers_ru": {
@@ -2237,7 +2237,7 @@
     "image": null,
     "page": 19,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Следующее действие водителя является рискованным, потому что:",
     "answers_ru": {
@@ -2258,7 +2258,7 @@
     "image": null,
     "page": 20,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Если водитель необходимо сделать экстренный звонок с мобильного телефона, что он должен сделать, чтобы не создать опасной ситуации на дороге?",
     "answers_ru": {
@@ -2279,7 +2279,7 @@
     "image": "/images/q_125.png",
     "page": 20,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Является ли данное поведение рискованным во время вождения?",
     "answers_ru": {
@@ -2300,7 +2300,7 @@
     "image": null,
     "page": 20,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Укажите порядок нормативного приоритета, который необходимо соблюдать (от большего к меньшему):",
     "answers_ru": {
@@ -2321,7 +2321,7 @@
     "image": "/images/q_128.png",
     "page": 20,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Если при подходе к перекрестку выставлены эти 3 знака, какой из них имеет приоритет над остальными?",
     "answers_ru": {
@@ -2342,7 +2342,7 @@
     "image": "/images/q_129.png",
     "page": 20,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Как водителю, что нужно делать в следующей ситуации?",
     "answers_ru": {
@@ -2363,7 +2363,7 @@
     "image": "/images/q_130.png",
     "page": 20,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что сообщает инспектор дорожного движения, делая этот жест водителю?",
     "answers_ru": {
@@ -2384,7 +2384,7 @@
     "image": "/images/q_133.png",
     "page": 21,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Если на дороге и указанное лицо указывает вам остановиться, обязаны ли вы подчиниться?",
     "answers_ru": {
@@ -2405,7 +2405,7 @@
     "image": null,
     "page": 21,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Если вы находитесь в этой ситуации и работник железной дороги указывает вам продолжать движение, что вы должны сделать?",
     "answers_ru": {
@@ -2426,7 +2426,7 @@
     "image": "/images/q_135.png",
     "page": 21,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что обозначают оранжевые временные знаки, расположенные на дороге на данном изображении?",
     "answers_ru": {
@@ -2447,7 +2447,7 @@
     "image": "/images/q_137.png",
     "page": 21,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какой тип знака изображен на следующем изображении?",
     "answers_ru": {
@@ -2468,7 +2468,7 @@
     "image": "/images/q_139.png",
     "page": 22,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Если вы управляете транспортным средством и находите на перекрестке с этой мигающей сигнализацией, какое поведение вы должны принять?",
     "answers_ru": {
@@ -2489,7 +2489,7 @@
     "image": "/images/q_140.png",
     "page": 22,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Если вы управляете транспортным средством и находите на перекрестке с этой мигающей сигнализацией, какое поведение вы должны принять?",
     "answers_ru": {
@@ -2510,7 +2510,7 @@
     "image": null,
     "page": 22,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Перед данной ситуацией, что должен сделать водитель автомобиля, обозначенного красным кругом?",
     "answers_ru": {
@@ -2531,7 +2531,7 @@
     "image": null,
     "page": 22,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Когда светофор переключается с красного на зелёный, он разрешает возобновить движение; однако, какие меры предосторожности следует предпринять?",
     "answers_ru": {
@@ -2552,7 +2552,7 @@
     "image": null,
     "page": 22,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В отношении горизонтального сигнализирования, что понимается под \"островком\"?",
     "answers_ru": {
@@ -2573,7 +2573,7 @@
     "image": "/images/q_144.png",
     "page": 23,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что указывает эта жёлтая разметка на дороге?",
     "answers_ru": {
@@ -2594,7 +2594,7 @@
     "image": null,
     "page": 23,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что означает эта жёлтая разметка на дороге?",
     "answers_ru": {
@@ -2615,7 +2615,7 @@
     "image": "/images/q_146.png",
     "page": 23,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "На следующем изображении, что обозначают центральные линии дороги?",
     "answers_ru": {
@@ -2636,7 +2636,7 @@
     "image": "/images/q_147.png",
     "page": 23,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Согласно Закону № 2148, что указывает следующая горизонтальная разметка?",
     "answers_ru": {
@@ -2657,7 +2657,7 @@
     "image": "/images/q_148.png",
     "page": 23,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Согласно Закону № 2148, что указывает бордюр, окрашенный в этот цвет?",
     "answers_ru": {
@@ -2678,7 +2678,7 @@
     "image": "/images/q_149.png",
     "page": 23,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Согласно Закону № 2148, что указывает следующая горизонтальная разметка?",
     "answers_ru": {
@@ -2699,7 +2699,7 @@
     "image": null,
     "page": 24,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какова важность цвета дорожных знаков?",
     "answers_ru": {
@@ -2720,7 +2720,7 @@
     "image": null,
     "page": 24,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что такое предупреждающие знаки?",
     "answers_ru": {
@@ -2741,7 +2741,7 @@
     "image": null,
     "page": 24,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что означают обязательные знаки?",
     "answers_ru": {
@@ -2762,7 +2762,7 @@
     "image": "/images/q_153.png",
     "page": 24,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какой из этих знаков сообщает о \"Предупреждении\"?",
     "answers_ru": {
@@ -2783,7 +2783,7 @@
     "image": null,
     "page": 24,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какого цвета знак \"Разрешено парковаться\"?",
     "answers_ru": {
@@ -2804,7 +2804,7 @@
     "image": "/images/q_155.png",
     "page": 24,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какой из этих знаков является обязательным?",
     "answers_ru": {
@@ -2825,7 +2825,7 @@
     "image": "/images/q_156.png",
     "page": 24,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какой из этих знаков является обязательным знаком?",
     "answers_ru": {
@@ -2846,7 +2846,7 @@
     "image": "/images/q_157.png",
     "page": 25,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какой из этих знаков является информационным?",
     "answers_ru": {
@@ -2867,7 +2867,7 @@
     "image": "/images/q_158.png",
     "page": 25,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Укажите, каким типом знака является показанный ниже знак:",
     "answers_ru": {
@@ -2888,7 +2888,7 @@
     "image": "/images/q_159.png",
     "page": 25,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какой из следующих изображений, по форме и цвету, соответствует знаку, указывающему на круговую развязку или крутой склон?",
     "answers_ru": {
@@ -2909,7 +2909,7 @@
     "image": "/images/q_160.png",
     "page": 25,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какой из следующих изображений, по форме и цвету, соответствует знаку, указывающему на приближение к зоне, затронутой работами?",
     "answers_ru": {
@@ -2930,7 +2930,7 @@
     "image": "/images/q_161.png",
     "page": 25,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В случае следующей аварийной ситуации, что должны делать водители, которые движутся вблизи?",
     "answers_ru": {}
@@ -2947,7 +2947,7 @@
     "image": "/images/q_163.png",
     "page": 25,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Перед следующей ситуацией экстренной помощи, в каком направлении рекомендуется отвести автомобили на изображении, чтобы облегчить проход скорой помощи?",
     "answers_ru": {
@@ -2968,7 +2968,7 @@
     "image": "/images/q_164.png",
     "page": 26,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Перед следующей ситуацией экстренной помощи, в каком направлении рекомендуется отвезти автомобили на изображении, чтобы облегчить проход скорой помощи?",
     "answers_ru": {
@@ -2989,7 +2989,7 @@
     "image": null,
     "page": 26,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Перед следующей ситуацией экстренной помощи, что должны делать водители, которые движутся вблизи?",
     "answers_ru": {
@@ -3010,7 +3010,7 @@
     "image": null,
     "page": 26,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Вы находитесь перед следующей ситуацией, где водитель неоднократно сигналит, что вы должны делать, если находитесь за рулем поблизости?",
     "answers_ru": {
@@ -3031,7 +3031,7 @@
     "image": "/images/q_167.png",
     "page": 26,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "На этом перекрестке без светофоров, где водитель автомобиля поворачивает вправо, кто имеет приоритет проезда?",
     "answers_ru": {
@@ -3052,7 +3052,7 @@
     "image": null,
     "page": 26,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "На перекрестке двух улиц без светофора, в следующей ситуации, кто имеет приоритет проезда?",
     "answers_ru": {
@@ -3073,7 +3073,7 @@
     "image": "/images/q_172.png",
     "page": 27,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какое транспортное средство имеет приоритет проезда на этом перекрестке без светофора?",
     "answers_ru": {
@@ -3094,7 +3094,7 @@
     "image": null,
     "page": 27,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "При управлении транспортным средством и приближении к этому перекрестку, как следует действовать, увидев этот знак?",
     "answers_ru": {
@@ -3115,7 +3115,7 @@
     "image": null,
     "page": 27,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Как водителю транспортного средства следует действовать, увидев этот горизонтальный знак?",
     "answers_ru": {
@@ -3136,7 +3136,7 @@
     "image": null,
     "page": 28,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Согласно закону №2148, на перекрестках без светофоров, каков порядок приоритета проезда в зависимости от типа улицы?",
     "answers_ru": {
@@ -3157,7 +3157,7 @@
     "image": null,
     "page": 28,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Как общее правило, кто имеет приоритет проезда на перекрестке без светофоров?",
     "answers_ru": {
@@ -3178,7 +3178,7 @@
     "image": "/images/q_178.png",
     "page": 28,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В следующей ситуации, кому принадлежит приоритет проезда?",
     "answers_ru": {
@@ -3199,7 +3199,7 @@
     "image": null,
     "page": 28,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Кто имеет приоритет проезда на круговом движении?",
     "answers_ru": {
@@ -3220,7 +3220,7 @@
     "image": "/images/q_180.png",
     "page": 28,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В связи с этой ситуацией блокировки пути, что должен сделать водитель указанного транспортного средства?",
     "answers_ru": {
@@ -3241,7 +3241,7 @@
     "image": "/images/q_181.png",
     "page": 28,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В следующей ситуации, кому принадлежит приоритет проезда?",
     "answers_ru": {
@@ -3262,7 +3262,7 @@
     "image": "/images/q_182.png",
     "page": 28,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В этой ситуации, где есть круговое движение, кто имеет приоритет проезда?",
     "answers_ru": {
@@ -3283,7 +3283,7 @@
     "image": null,
     "page": 29,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Как общее правило, на двусторонней магистрали с крутым уклоном и шириной, которая не допускает одновременное движение двух транспортных средств, кто имеет приоритет проезда?",
     "answers_ru": {
@@ -3304,7 +3304,7 @@
     "image": null,
     "page": 29,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Когда необходимо уступить дорогу транспортным средствам, которые хотят влиться в движение с места, где они были припаркованы или из гаража?",
     "answers_ru": {
@@ -3325,7 +3325,7 @@
     "image": "/images/q_186.png",
     "page": 29,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Транспортное средство, обозначенное знаком, хочет влиться в движение, имеет ли оно приоритет проезда над другими транспортными средствами, которые движутся по этой магистрали?",
     "answers_ru": {
@@ -3346,7 +3346,7 @@
     "image": "/images/q_187.png",
     "page": 29,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Транспортное средство, обозначенное знаком, хочет влиться в движение, имеет ли оно приоритет проезда над другими транспортными средствами, которые остановлены на магистрали?",
     "answers_ru": {
@@ -3367,7 +3367,7 @@
     "image": "/images/q_188.png",
     "page": 29,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В данной ситуации может ли транспортное средство B обогнать транспортное средство A?",
     "answers_ru": {
@@ -3388,7 +3388,7 @@
     "image": "/images/q_189.png",
     "page": 30,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какие из следующих транспортных средств НЕТ в нарушении?",
     "answers_ru": {
@@ -3409,7 +3409,7 @@
     "image": "/images/q_191.png",
     "page": 30,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В этом типе дороги, кто имеет приоритет, когда желает выполнить смену полосы?",
     "answers_ru": {
@@ -3430,7 +3430,7 @@
     "image": null,
     "page": 30,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Обязательно после обгона...",
     "answers_ru": {
@@ -3451,7 +3451,7 @@
     "image": "/images/q_193.png",
     "page": 30,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какая из этих полос называется \"полосой для обгона\"?",
     "answers_ru": {
@@ -3472,7 +3472,7 @@
     "image": "/images/q_195.png",
     "page": 30,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Водитель автомобиля А хочет быстро вернуться на правую полосу, потому что перед ним возникает ситуация опасности. Что должен сделать водитель автомобиля Б?",
     "answers_ru": {
@@ -3493,7 +3493,7 @@
     "image": null,
     "page": 31,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Замечая, что вас собираются обогнать, какова должна быть ваша реакция?",
     "answers_ru": {
@@ -3514,7 +3514,7 @@
     "image": "/images/q_198.png",
     "page": 31,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Разрешено ли обгонять другое транспортное средство в этом месте?",
     "answers_ru": {
@@ -3535,7 +3535,7 @@
     "image": null,
     "page": 31,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Когда несколько транспортных средств движутся в колонне, у кого из них есть приоритет на обгон?",
     "answers_ru": {
@@ -3556,7 +3556,7 @@
     "image": null,
     "page": 31,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Согласно Закону N°2148, что означает термин обгон?",
     "answers_ru": {
@@ -3577,7 +3577,7 @@
     "image": null,
     "page": 31,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какую опасность следует предусмотреть при обгоне стоящего автобуса?",
     "answers_ru": {
@@ -3598,7 +3598,7 @@
     "image": "/images/q_202.png",
     "page": 31,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В этой ситуации, кто имеет приоритет для обгона грузовика?",
     "answers_ru": {
@@ -3619,7 +3619,7 @@
     "image": null,
     "page": 31,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Если при подъезде к перекрестку без светофоров вы видите, что транспортное средство перед вами остановилось, ожидая поворота налево, что вы должны сделать, если хотите продолжить движение прямо?",
     "answers_ru": {
@@ -3640,7 +3640,7 @@
     "image": "/images/q_204.png",
     "page": 32,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Можно ли пересекать следующий горизонтальный знак?",
     "answers_ru": {
@@ -3661,7 +3661,7 @@
     "image": null,
     "page": 32,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Как общее правило, где запрещен обгон транспортного средства?",
     "answers_ru": {
@@ -3682,7 +3682,7 @@
     "image": null,
     "page": 32,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В туннеле с двусторонним движением разрешено ли обгонять транспортное средство?",
     "answers_ru": {
@@ -3703,7 +3703,7 @@
     "image": null,
     "page": 32,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "На дороге с двусторонним движением, что нужно проверить перед началом обгона?",
     "answers_ru": {
@@ -3724,7 +3724,7 @@
     "image": "/images/q_208.png",
     "page": 32,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Можно ли в этом месте обгонять другое транспортное средство?",
     "answers_ru": {
@@ -3745,7 +3745,7 @@
     "image": null,
     "page": 32,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какое поведение следует соблюдать вблизи центральной разметки дороги?",
     "answers_ru": {
@@ -3766,7 +3766,7 @@
     "image": "/images/q_210.png",
     "page": 32,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что означает эта желтая разметка на дороге?",
     "answers_ru": {
@@ -3787,7 +3787,7 @@
     "image": null,
     "page": 33,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Полоса обгона на автомагистрали служит для...",
     "answers_ru": {
@@ -3808,7 +3808,7 @@
     "image": null,
     "page": 33,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что такое \"полоса ускорения\"?",
     "answers_ru": {
@@ -3829,7 +3829,7 @@
     "image": null,
     "page": 33,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Вы едете по двум-полосной авеню и, приезжая к перекрестку, нужно повернуть налево, чтобы попасть на одностороннюю улицу. В соответствии с Законом №2148, при каких условиях вы можете выполнить этот маневр?",
     "answers_ru": {
@@ -3850,7 +3850,7 @@
     "image": "/images/q_216.png",
     "page": 33,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Согласно Закону № 2148, разрешен ли следующий поворот?",
     "answers_ru": {
@@ -3871,7 +3871,7 @@
     "image": "/images/q_217.png",
     "page": 33,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Согласно Закону № 2148, разрешен ли этот поворот?",
     "answers_ru": {
@@ -3892,7 +3892,7 @@
     "image": "/images/q_218.png",
     "page": 34,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Транспортное средство с красным кругом хотело повернуть направо, но по ошибке продолжило двигаться прямо, поэтому:",
     "answers_ru": {
@@ -3913,7 +3913,7 @@
     "image": "/images/q_219.png",
     "page": 34,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Согласно общим правилам, какова максимальная разрешенная скорость на этой улице?",
     "answers_ru": {
@@ -3934,7 +3934,7 @@
     "image": "/images/q_220.png",
     "page": 34,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Согласно общим правилам, какова минимальная разрешенная скорость на этой улице?",
     "answers_ru": {
@@ -3955,7 +3955,7 @@
     "image": null,
     "page": 34,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Согласно общим правилам, какая максимальная скорость может быть достигнута транспортным средством, движущимся по трассе при пересечении городской зоны?",
     "answers_ru": {
@@ -3976,7 +3976,7 @@
     "image": "/images/q_223.png",
     "page": 34,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какова максимальная разрешенная скорость на этом отрезке улицы?",
     "answers_ru": {
@@ -3997,7 +3997,7 @@
     "image": "/images/q_224.png",
     "page": 35,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какова максимальная разрешённая скорость на этом участке дороги?",
     "answers_ru": {
@@ -4018,7 +4018,7 @@
     "image": null,
     "page": 35,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Когда необходимо снизить скорость при намерении покинуть автомагистраль или полумагистраль?",
     "answers_ru": {
@@ -4039,7 +4039,7 @@
     "image": null,
     "page": 35,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Согласно Национальному закону № 24.449, какова максимальная разрешённая скорость для частных автомобилей на полумагистралях?",
     "answers_ru": {
@@ -4060,7 +4060,7 @@
     "image": null,
     "page": 35,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Согласно Национальному закону № 24.449, в общем порядке, какова минимально разрешённая скорость на полумагистралях?",
     "answers_ru": {
@@ -4081,7 +4081,7 @@
     "image": null,
     "page": 35,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что понимается под осторожной скоростью?",
     "answers_ru": {
@@ -4102,7 +4102,7 @@
     "image": "/images/q_230.png",
     "page": 35,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "На этом перекрестке двух улиц без светофоров, каков верхний предел осторожной скорости, установленный законом?",
     "answers_ru": {
@@ -4123,7 +4123,7 @@
     "image": null,
     "page": 36,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Согласно Закону №2148, какова осторожная скорость перед школа во время часов входа и выхода?",
     "answers_ru": {
@@ -4144,7 +4144,7 @@
     "image": null,
     "page": 36,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Согласно Закону №2148, каков верхний предел осторожной скорости на железнодорожном переезде?",
     "answers_ru": {
@@ -4165,7 +4165,7 @@
     "image": "/images/q_233.png",
     "page": 36,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Транспортные средства, движущиеся по следующему проспекту, при прибытии к этому перекрестку без светофоров, какой верхний предел осторожной скорости они должны соблюдать?",
     "answers_ru": {
@@ -4186,7 +4186,7 @@
     "image": null,
     "page": 36,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что называется «дистанцией безопасности»?",
     "answers_ru": {
@@ -4207,7 +4207,7 @@
     "image": null,
     "page": 36,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что называется \"временем реакции\"?",
     "answers_ru": {
@@ -4228,7 +4228,7 @@
     "image": null,
     "page": 36,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что называется \"дистанцией реакции\"?",
     "answers_ru": {
@@ -4249,7 +4249,7 @@
     "image": null,
     "page": 36,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какова связь между скоростью и зрительным полем водителя?",
     "answers_ru": {
@@ -4270,7 +4270,7 @@
     "image": null,
     "page": 37,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Превышение скорости...",
     "answers_ru": {
@@ -4291,7 +4291,7 @@
     "image": null,
     "page": 37,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "На какую линию следует ориентироваться при остановке или парковке вблизи угла?",
     "answers_ru": {
@@ -4312,7 +4312,7 @@
     "image": null,
     "page": 37,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Каков наиболее подходящий способ управления транспортным средством на этом участке дороги?",
     "answers_ru": {
@@ -4333,7 +4333,7 @@
     "image": "/images/q_244.png",
     "page": 37,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Если вы видите этот знак во время вождения, вы должны…",
     "answers_ru": {
@@ -4354,7 +4354,7 @@
     "image": null,
     "page": 37,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Если вы находитесь на дороге и видите этот знак, какое поведение вы должны соблюдать?",
     "answers_ru": {
@@ -4375,7 +4375,7 @@
     "image": "/images/q_247.png",
     "page": 38,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Если вы собираетесь остановиться или припарковаться вблизи этого угла, где правильно это сделать?",
     "answers_ru": {
@@ -4396,7 +4396,7 @@
     "image": null,
     "page": 38,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Согласно Закону №24.449, в случае остановки транспортного средства в этой зоне, какое минимальное расстояние следует соблюдать?",
     "answers_ru": {
@@ -4417,7 +4417,7 @@
     "image": null,
     "page": 38,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Можно ли остановить транспортное средство в этом месте?",
     "answers_ru": {
@@ -4438,7 +4438,7 @@
     "image": "/images/q_250.png",
     "page": 38,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Если транспортное средство, идущее впереди, движется с включенными мигающими огнями, что это может означать для водителя?",
     "answers_ru": {
@@ -4459,7 +4459,7 @@
     "image": "/images/q_251.png",
     "page": 38,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что означает использование этого типа огней?",
     "answers_ru": {
@@ -4480,7 +4480,7 @@
     "image": null,
     "page": 39,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Как водитель должен указывать въезд в гараж или парковку?",
     "answers_ru": {
@@ -4501,7 +4501,7 @@
     "image": "/images/q_255.png",
     "page": 39,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Действительны ли такие сигналы?",
     "answers_ru": {
@@ -4522,7 +4522,7 @@
     "image": null,
     "page": 39,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Если вы управляете автомобилем и собираетесь повернуть на перекрестке, вы должны заранее предупредить о своем маневре, используя соответствующий поворотник не менее чем за...",
     "answers_ru": {
@@ -4543,7 +4543,7 @@
     "image": null,
     "page": 39,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Для того чтобы правильно выполнить поворот на перекрестке, нужно указать...",
     "answers_ru": {
@@ -4564,7 +4564,7 @@
     "image": "/images/q_260.png",
     "page": 40,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что означают огни этого транспортного средства с точки зрения направления движения?",
     "answers_ru": {
@@ -4585,7 +4585,7 @@
     "image": "/images/q_261.png",
     "page": 40,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Для чего нужны эти мигающие огни?",
     "answers_ru": {
@@ -4606,7 +4606,7 @@
     "image": null,
     "page": 40,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что представляет собой \"аквапланирование\"?",
     "answers_ru": {
@@ -4627,7 +4627,7 @@
     "image": null,
     "page": 40,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что должен учитывать водитель относительно скорости в данной ситуации?",
     "answers_ru": {
@@ -4648,7 +4648,7 @@
     "image": null,
     "page": 40,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Когда на дороге есть вода, нужно снизить скорость, чтобы избежать…",
     "answers_ru": {
@@ -4669,7 +4669,7 @@
     "image": null,
     "page": 41,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Если дорожное покрытие мокрое и есть лужи, могут ли тормоза потерять эффективность?",
     "answers_ru": {
@@ -4690,7 +4690,7 @@
     "image": "/images/q_267.png",
     "page": 41,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "При таких климатических условиях, нужно ли включать ближний свет?",
     "answers_ru": {
@@ -4711,7 +4711,7 @@
     "image": "/images/q_268.png",
     "page": 41,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "При длительной езде в таких климатических условиях…",
     "answers_ru": {
@@ -4732,7 +4732,7 @@
     "image": "/images/q_269.png",
     "page": 41,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "При этих климатических условиях рекомендуется увеличить безопасное расстояние и снизить скорость?",
     "answers_ru": {
@@ -4753,7 +4753,7 @@
     "image": "/images/q_271.png",
     "page": 41,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Когда вы едете в этих климатических условиях, на сколько следует увеличить правило 2 секунд в безопасном расстоянии?",
     "answers_ru": {
@@ -4774,7 +4774,7 @@
     "image": "/images/q_272.png",
     "page": 41,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "При движении по дороге в таких условиях, расстояние торможения будет...",
     "answers_ru": {
@@ -4795,7 +4795,7 @@
     "image": null,
     "page": 42,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В этих условиях неправильная регулировка высоты ближнего света может вызвать ослепление?",
     "answers_ru": {
@@ -4816,7 +4816,7 @@
     "image": "/images/q_274.png",
     "page": 42,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Каков предел максимальной скорости в этой ситуации?",
     "answers_ru": {
@@ -4837,7 +4837,7 @@
     "image": null,
     "page": 42,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "В этой ситуации что рекомендуется делать?",
     "answers_ru": {
@@ -4858,7 +4858,7 @@
     "image": "/images/q_276.png",
     "page": 42,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "При этих погодных условиях, какие фары вы должны использовать, чтобы ехать по этому маршруту?",
     "answers_ru": {
@@ -4879,7 +4879,7 @@
     "image": "/images/q_277.png",
     "page": 42,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Если вы находитесь на этой трассе при таких погодных условиях, будет ли наиболее целесообразно остановиться на обочине?",
     "answers_ru": {
@@ -4900,7 +4900,7 @@
     "image": null,
     "page": 42,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Туман, как фактор риска, вызывает изменения в…",
     "answers_ru": {
@@ -4921,7 +4921,7 @@
     "image": "/images/q_280.png",
     "page": 43,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Если вы едете по дороге и наблюдаете эту ситуацию, вы должны…",
     "answers_ru": {
@@ -4942,7 +4942,7 @@
     "image": null,
     "page": 43,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Если водитель автомобиля движется с включенными аварийными огнями, неоднократно сигналит и пассажир высунул руку, махая платком. Что это означает?",
     "answers_ru": {
@@ -4963,7 +4963,7 @@
     "image": null,
     "page": 43,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Если при вождении по автостраде вы замечаете, что у автомобиля серьезная неисправность, но несмотря на это можете продолжать движение; что рекомендуется делать в таких случаях?",
     "answers_ru": {
@@ -4984,7 +4984,7 @@
     "image": null,
     "page": 43,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какой автомобиль может буксировать другой на этой дороге?",
     "answers_ru": {
@@ -5005,7 +5005,7 @@
     "image": null,
     "page": 43,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "На этом типе дороги, разрешено ли буксировать своим личным автомобилем другой, который находится в неисправности?",
     "answers_ru": {
@@ -5026,7 +5026,7 @@
     "image": null,
     "page": 44,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что такое превентивное вождение?",
     "answers_ru": {
@@ -5047,7 +5047,7 @@
     "image": null,
     "page": 44,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что называется эффективным вождением?",
     "answers_ru": {
@@ -5068,7 +5068,7 @@
     "image": null,
     "page": 44,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Из указанных факторов, какой влияет на чрезмерный расход топлива?",
     "answers_ru": {
@@ -5089,7 +5089,7 @@
     "image": null,
     "page": 44,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Важно проводить правильное техническое обслуживание транспортного средства, потому что...",
     "answers_ru": {
@@ -5110,7 +5110,7 @@
     "image": "/images/q_290.png",
     "page": 44,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Согласно Закону №2148, в какой ситуации запрещено выполнять следующее действие?",
     "answers_ru": {
@@ -5131,7 +5131,7 @@
     "image": "/images/q_291.png",
     "page": 44,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Для чего служит эта металлическая щуп?",
     "answers_ru": {
@@ -5152,7 +5152,7 @@
     "image": "/images/q_292.png",
     "page": 44,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Чем смазывается двигатель?",
     "answers_ru": {
@@ -5173,7 +5173,7 @@
     "image": "/images/q_293.png",
     "page": 45,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Определите, что обозначает сигнал, который будет представлен ниже:",
     "answers_ru": {
@@ -5194,7 +5194,7 @@
     "image": "/images/q_294.png",
     "page": 45,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что указывает этот сигнал?",
     "answers_ru": {
@@ -5215,7 +5215,7 @@
     "image": "/images/q_295.png",
     "page": 45,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Определите, что обозначает сигнал, который будет представлен ниже:",
     "answers_ru": {
@@ -5236,7 +5236,7 @@
     "image": "/images/q_296.png",
     "page": 45,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Определите, что обозначает сигнал, который будет представлен ниже:",
     "answers_ru": {
@@ -5257,7 +5257,7 @@
     "image": "/images/q_297.png",
     "page": 45,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Определите, что указывает знак, который будет представлен далее:",
     "answers_ru": {
@@ -5278,7 +5278,7 @@
     "image": "/images/q_298.png",
     "page": 45,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Определите, что указывает знак, который будет представлен далее:",
     "answers_ru": {
@@ -5299,7 +5299,7 @@
     "image": "/images/q_299.png",
     "page": 46,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Определите, что указывает знак, который будет представлен далее:",
     "answers_ru": {
@@ -5320,7 +5320,7 @@
     "image": "/images/q_300.png",
     "page": 46,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Определите, что указывает знак, который будет представлен далее:",
     "answers_ru": {
@@ -5341,7 +5341,7 @@
     "image": "/images/q_301.png",
     "page": 46,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Определите, что указывает знак, который будет представлен далее:",
     "answers_ru": {
@@ -5362,7 +5362,7 @@
     "image": "/images/q_302.png",
     "page": 46,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Определите, что указывает следующая сигнализация:",
     "answers_ru": {
@@ -5383,7 +5383,7 @@
     "image": "/images/q_303.png",
     "page": 46,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что указывает этот предупредительный знак?",
     "answers_ru": {
@@ -5404,7 +5404,7 @@
     "image": "/images/q_304.png",
     "page": 46,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Определите, что указывает следующая сигнализация:",
     "answers_ru": {
@@ -5425,7 +5425,7 @@
     "image": "/images/q_305.png",
     "page": 46,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Определите, что указывает следующая сигнализация:",
     "answers_ru": {
@@ -5446,7 +5446,7 @@
     "image": "/images/q_306.png",
     "page": 47,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Определите, что указывает вертикальный знак, который будет представлен ниже:",
     "answers_ru": {
@@ -5467,7 +5467,7 @@
     "image": "/images/q_307.png",
     "page": 47,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какая из этих знаков указывает на \"Пешеходный переход (максимальная опасность)\"?",
     "answers_ru": {
@@ -5488,7 +5488,7 @@
     "image": "/images/q_308.png",
     "page": 47,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Определите, что указывает следующий знак:",
     "answers_ru": {
@@ -5509,7 +5509,7 @@
     "image": "/images/q_309.png",
     "page": 47,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "При просмотре этого знака предупреждения вы знаете, что:",
     "answers_ru": {
@@ -5530,7 +5530,7 @@
     "image": "/images/q_310.png",
     "page": 47,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Определите, что указывает следующий знак:",
     "answers_ru": {
@@ -5551,7 +5551,7 @@
     "image": "/images/q_311.png",
     "page": 47,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Определите, что указывает следующий знак:",
     "answers_ru": {
@@ -5572,7 +5572,7 @@
     "image": "/images/q_312.png",
     "page": 47,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Определите, что указывает знак, который представлен ниже:",
     "answers_ru": {
@@ -5593,7 +5593,7 @@
     "image": "/images/q_313.png",
     "page": 48,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Определите, что указывает знак, который представлен ниже:",
     "answers_ru": {
@@ -5614,7 +5614,7 @@
     "image": "/images/q_315.png",
     "page": 48,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Перед этим знаком, что происходит с приоритетом проезда на этом участке дороги?",
     "answers_ru": {
@@ -5635,7 +5635,7 @@
     "image": "/images/q_316.png",
     "page": 48,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что означает этот знак?",
     "answers_ru": {
@@ -5656,7 +5656,7 @@
     "image": "/images/q_317.png",
     "page": 48,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что указывает этот знак?",
     "answers_ru": {
@@ -5677,7 +5677,7 @@
     "image": "/images/q_319.png",
     "page": 48,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что обозначает этот знак?",
     "answers_ru": {
@@ -5698,7 +5698,7 @@
     "image": "/images/q_320.png",
     "page": 49,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Определите, что обозначает знак, представленный ниже:",
     "answers_ru": {
@@ -5719,7 +5719,7 @@
     "image": "/images/q_321.png",
     "page": 49,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Этот вертикальный регулирующий знак указывает...",
     "answers_ru": {
@@ -5740,7 +5740,7 @@
     "image": "/images/q_322.png",
     "page": 49,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что обозначает этот регулирующий знак?",
     "answers_ru": {
@@ -5761,7 +5761,7 @@
     "image": "/images/q_323.png",
     "page": 49,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что обозначает этот регулирующий знак?",
     "answers_ru": {
@@ -5782,7 +5782,7 @@
     "image": "/images/q_324.png",
     "page": 49,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что указывает этот регулирующий знак?",
     "answers_ru": {
@@ -5803,7 +5803,7 @@
     "image": null,
     "page": 49,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что указывает этот регулирующий знак?",
     "answers_ru": {
@@ -5824,7 +5824,7 @@
     "image": "/images/q_326.png",
     "page": 49,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что указывает этот регулирующий знак?",
     "answers_ru": {
@@ -5845,7 +5845,7 @@
     "image": "/images/q_327.png",
     "page": 50,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Определите, что указывает сигнал, который будет представлен ниже:",
     "answers_ru": {
@@ -5866,7 +5866,7 @@
     "image": "/images/q_329.png",
     "page": 50,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Укажите, что представляет следующий сигнал:",
     "answers_ru": {
@@ -5887,7 +5887,7 @@
     "image": "/images/q_330.png",
     "page": 50,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Определите, что означает знак, который будет представлен ниже:",
     "answers_ru": {
@@ -5908,7 +5908,7 @@
     "image": "/images/q_331.png",
     "page": 50,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Определите, что означает знак, который будет представлен ниже:",
     "answers_ru": {
@@ -5929,7 +5929,7 @@
     "image": "/images/q_332.png",
     "page": 50,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Определите, что означает знак, который будет представлен ниже:",
     "answers_ru": {
@@ -5950,7 +5950,7 @@
     "image": "/images/q_333.png",
     "page": 50,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что означает этот знак?",
     "answers_ru": {
@@ -5971,7 +5971,7 @@
     "image": "/images/q_335.png",
     "page": 51,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что означает этот вертикальный информационный знак?",
     "answers_ru": {
@@ -5992,7 +5992,7 @@
     "image": "/images/q_336.png",
     "page": 51,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "На какую контрольную точку ссылается представленный ниже знак?",
     "answers_ru": {
@@ -6013,7 +6013,7 @@
     "image": "/images/q_337.png",
     "page": 51,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что указывает этот знак?",
     "answers_ru": {
@@ -6034,7 +6034,7 @@
     "image": "/images/q_338.png",
     "page": 51,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что означает этот знак?",
     "answers_ru": {
@@ -6055,7 +6055,7 @@
     "image": "/images/q_339.png",
     "page": 51,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что указывает этот знак?",
     "answers_ru": {
@@ -6076,7 +6076,7 @@
     "image": "/images/q_340.png",
     "page": 51,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Что указывает этот знак?",
     "answers_ru": {
@@ -6097,7 +6097,7 @@
     "image": "/images/q_341.png",
     "page": 52,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Какая из трех сигналов указывает, что дорога является провинциальной?",
     "answers_ru": {
@@ -6118,7 +6118,7 @@
     "image": "/images/q_342.png",
     "page": 52,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Укажите, что означает этот сигнал:",
     "answers_ru": {
@@ -6139,7 +6139,7 @@
     "image": "/images/q_343.png",
     "page": 52,
     "categories": [
-      "base"
+      "generales"
     ],
     "question_ru": "Укажите, что означает этот сигнал:",
     "answers_ru": {
@@ -6581,7 +6581,6 @@
     "page": 95,
     "categories": [
       "C",
-      "G",
       "E"
     ],
     "question_ru": "Движение двухколесного транспортного средства обычно более рискованно, потому что...",
@@ -6604,7 +6603,6 @@
     "page": 101,
     "categories": [
       "C",
-      "G",
       "E"
     ],
     "question_ru": "Какой участок дороги должны использовать грузовики без прицепа?",

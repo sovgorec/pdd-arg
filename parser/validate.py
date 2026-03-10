@@ -19,7 +19,7 @@ def validate_and_log(questions: list[dict[str, Any]]) -> bool:
     print(f"Questions with images: {with_images}")
     print(f"Questions without images: {without_images}")
     print("Questions per category:")
-    for cat in ["base", "A", "B", "C", "D", "E", "G"]:
+    for cat in ["generales", "A", "B", "C", "D", "E"]:
         if cat in cat_counts:
             print(f"  {cat}: {cat_counts[cat]}")
 

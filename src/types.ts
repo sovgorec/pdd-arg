@@ -11,11 +11,10 @@ export interface Question {
 }
 
 export const CATEGORY_LABELS: Record<string, string> = {
-  base: "Base",
+  generales: "Generales",
   A: "Категория A",
   B: "Категория B",
   C: "Категория C",
   D: "Категория D",
   E: "Категория E",
-  G: "Категория G",
 };
