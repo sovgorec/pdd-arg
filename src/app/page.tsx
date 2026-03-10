@@ -100,7 +100,14 @@ export default function Home() {
     }
   }, [selectedCats, onlyWithImages, onlyErrors, examMode, questions.length, filteredQuestions.length]);
 
-  const currentId = order[index];
+  useEffect(() => {
+    if (order.length > 0 && index >= order.length) {
+      setIndex(0);
+    }
+  }, [order, index]);
+
+  const safeIndex = Math.min(index, Math.max(0, order.length - 1));
+  const currentId = order[safeIndex];
   const current = questions.find((q) => q.id === currentId);
 
   const handleAnswer = (letter: string) => {
@@ -174,6 +181,14 @@ export default function Home() {
         >
           Перезагрузить
         </button>
+      </div>
+    );
+  }
+
+  if (filteredQuestions.length > 0 && (order.length === 0 || !current || !filteredQuestions.some((q) => q.id === current.id))) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-stone-100">
+        <p className="text-stone-900">Загрузка…</p>
       </div>
     );
   }
@@ -257,7 +272,7 @@ export default function Home() {
                 </span>
               )}
               <span className="ml-2 text-sm text-stone-500">
-                {index + 1} / {order.length}
+                {safeIndex + 1} / {order.length}
               </span>
             </div>
 
