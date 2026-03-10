@@ -10,10 +10,13 @@ type Stats = {
   month: { visits: number; unique: number };
 } | null;
 
+type FeedbackItem = { id: string; text: string; ts: number };
+
 export default function AdminPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [stats, setStats] = useState<Stats>(null);
+  const [feedback, setFeedback] = useState<FeedbackItem[]>([]);
   const [loading, setLoading] = useState(false);
   const [needsLogin, setNeedsLogin] = useState<boolean | null>(null);
 
@@ -44,14 +47,19 @@ export default function AdminPage() {
 
   const loadStats = async () => {
     const pwd = typeof window !== "undefined" ? sessionStorage.getItem("admin_pwd") : "";
-    const url = pwd ? `/api/analytics?p=${encodeURIComponent(pwd)}` : "/api/analytics";
-    const res = await fetch(url);
-    if (res.ok) {
-      const data = await res.json();
-      setStats(data);
+    const q = pwd ? `?p=${encodeURIComponent(pwd)}` : "";
+    const [resStats, resFeedback] = await Promise.all([
+      fetch(`/api/analytics${q}`),
+      fetch(`/api/feedback${q}`),
+    ]);
+    if (resStats.ok) {
+      setStats(await resStats.json());
       setNeedsLogin(false);
     } else {
       setNeedsLogin(true);
+    }
+    if (resFeedback.ok) {
+      setFeedback(await resFeedback.json());
     }
   };
 
@@ -106,6 +114,20 @@ export default function AdminPage() {
         <p className="mt-6 text-sm text-stone-500">
           Визиты = загрузки приложения. Уникальные = по sessionId (приближённо ≈ устройства/пользователи).
         </p>
+
+        <h2 className="mb-3 mt-10 text-lg font-semibold text-stone-900">Сообщения о проблемах</h2>
+        {feedback.length === 0 ? (
+          <p className="text-sm text-stone-500">Пока нет сообщений</p>
+        ) : (
+          <div className="flex flex-col gap-3">
+            {[...feedback].reverse().map((f) => (
+              <div key={f.id} className="rounded-lg border border-stone-200 bg-white p-4 text-stone-900">
+                <p className="whitespace-pre-wrap text-sm">{f.text}</p>
+                <p className="mt-2 text-xs text-stone-500">{new Date(f.ts).toLocaleString("ru")}</p>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

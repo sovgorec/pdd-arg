@@ -23,6 +23,10 @@ export default function Home() {
   const [selected, setSelected] = useState<string | null>(null);
   const [filterOpen, setFilterOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
+  const [feedbackOpen, setFeedbackOpen] = useState(false);
+  const [feedbackText, setFeedbackText] = useState("");
+  const [feedbackSending, setFeedbackSending] = useState(false);
+  const [feedbackSent, setFeedbackSent] = useState(false);
   const [copiedField, setCopiedField] = useState<"alias" | "id" | null>(null);
   const [selectedCats, setSelectedCats] = useState<Set<string>>(new Set(["generales"]));
   const [onlyWithImages, setOnlyWithImages] = useState(false);
@@ -511,9 +515,81 @@ export default function Home() {
               </p>
             )}
 
+            <button
+              type="button"
+              onClick={() => setFeedbackOpen(true)}
+              className="mb-6 w-full rounded-lg border-2 border-stone-300 py-2.5 text-sm font-medium text-stone-700 hover:bg-stone-50"
+            >
+              Сообщить о проблеме
+            </button>
+
             <p className="text-center text-sm text-stone-500">
               Возможны ошибки, которые я найду и поправлю, если кто-то пришлет пожертвование
             </p>
+          </div>
+        </>
+      )}
+
+      {/* Шторка: Сообщить о проблеме */}
+      {feedbackOpen && (
+        <>
+          <div
+            className="fixed inset-0 z-[60] bg-black/40"
+            onClick={() => !feedbackSending && setFeedbackOpen(false)}
+            aria-hidden
+          />
+          <div className="fixed bottom-0 left-0 right-0 z-[70] max-h-[70vh] overflow-y-auto rounded-t-2xl bg-white p-6 shadow-xl">
+            <div className="mb-4 flex items-center justify-between">
+              <h3 className="text-lg font-semibold text-stone-900">Сообщить о проблеме</h3>
+              <button
+                onClick={() => !feedbackSending && setFeedbackOpen(false)}
+                className="rounded p-1 text-stone-500 hover:bg-stone-100"
+              >
+                ✕
+              </button>
+            </div>
+            {feedbackSent ? (
+              <p className="py-8 text-center text-green-700 font-medium">Спасибо!</p>
+            ) : (
+              <>
+                <textarea
+                  value={feedbackText}
+                  onChange={(e) => setFeedbackText(e.target.value)}
+                  placeholder="Опишите проблему…"
+                  rows={4}
+                  className="mb-4 w-full rounded-lg border border-stone-200 px-3 py-2 text-stone-900 placeholder:text-stone-400"
+                />
+                <button
+                  type="button"
+                  disabled={feedbackSending || !feedbackText.trim()}
+                  onClick={async () => {
+                    if (!feedbackText.trim()) return;
+                    setFeedbackSending(true);
+                    try {
+                      const res = await fetch("/api/feedback", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ text: feedbackText.trim() }),
+                      });
+                      const data = await res.json();
+                      if (data.ok) {
+                        setFeedbackSent(true);
+                        setFeedbackText("");
+                        setTimeout(() => {
+                          setFeedbackOpen(false);
+                          setFeedbackSent(false);
+                        }, 1500);
+                      }
+                    } finally {
+                      setFeedbackSending(false);
+                    }
+                  }}
+                  className="w-full rounded-lg bg-stone-800 py-3 text-white hover:bg-stone-700 disabled:opacity-50"
+                >
+                  {feedbackSending ? "Отправка…" : "Отправить"}
+                </button>
+              </>
+            )}
           </div>
         </>
       )}

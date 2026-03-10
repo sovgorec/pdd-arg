@@ -9,3 +9,4 @@ node_modules/
 out/
 .DS_Store
 data/analytics.json
+data/feedback.json
