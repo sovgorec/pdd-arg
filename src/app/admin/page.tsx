@@ -26,9 +26,11 @@ export default function AdminPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ password }),
       });
-      if (res.ok) {
+      const data = await res.json();
+      if (res.ok && data.token) {
+        if (typeof window !== "undefined") sessionStorage.setItem("admin_token", data.token);
         setNeedsLogin(false);
-        loadStats();
+        await loadStats();
       } else {
         setError("Неверный пароль");
       }
@@ -40,7 +42,10 @@ export default function AdminPage() {
   };
 
   const loadStats = async () => {
-    const res = await fetch("/api/analytics");
+    const tok = typeof window !== "undefined" ? sessionStorage.getItem("admin_token") : "";
+    const res = await fetch("/api/analytics", {
+      headers: tok ? { Authorization: `Bearer ${tok}` } : {},
+    });
     if (res.ok) {
       const data = await res.json();
       setStats(data);

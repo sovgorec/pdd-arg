@@ -1,3 +1,4 @@
+import { createHmac } from "crypto";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
@@ -5,15 +6,8 @@ export async function POST(request: NextRequest) {
   const body = await request.json().catch(() => ({}));
   const password = String(body.password || "").trim();
   if (expected && password === expected) {
-    const res = NextResponse.json({ ok: true });
-    res.cookies.set("admin", "1", {
-      path: "/",
-      maxAge: 60 * 60 * 24,
-      httpOnly: true,
-      sameSite: "lax",
-      secure: process.env.NODE_ENV === "production",
-    });
-    return res;
+    const token = createHmac("sha256", expected).update("admin").digest("hex");
+    return NextResponse.json({ ok: true, token });
   }
   return NextResponse.json({ ok: false }, { status: 401 });
 }
