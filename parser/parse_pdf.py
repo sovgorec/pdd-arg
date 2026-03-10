@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
 Парсер PDF с вопросами ПДД Аргентины.
-Извлекает: номер, текст вопроса, варианты A/B/C, правильный ответ (жирный), изображения.
+Извлекает: номер, страница, категории, текст вопроса, варианты A/B/C, правильный ответ, изображения.
 """
 
 import json
+import math
 import os
 import re
 import sys
@@ -12,20 +13,39 @@ from pathlib import Path
 
 import fitz
 
-# Корень проекта (родитель папки parser)
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_PDF = None  # будет найден автоматически
 OUTPUT_JSON = PROJECT_ROOT / "data" / "questions.json"
 IMAGES_DIR = PROJECT_ROOT / "images"
 
-# Минимальная высота изображения (отсекаем мелкие элементы типа логотипов в шапке)
 MIN_IMAGE_HEIGHT = 40
-# Максимальная ширина для "левого" контентного изображения (не шапка справа)
-MAX_IMAGE_X_FOR_CONTENT = 150
+MAX_IMAGE_X_FOR_CONTENT = 200  # левее — контентное изображение
+
+# Категории по страницам PDF (0-indexed). PDF page 0 = стр 1
+CATEGORY_RANGES = [
+    ("base", 0, 51),    # стр 1–52
+    ("A", 52, 75),      # стр 53–76
+    ("B", 76, 93),      # стр 77–94
+    ("C", 94, 104),     # C/G/E стр 95–105
+    ("G", 94, 104),
+    ("E", 94, 104),
+    ("D", 105, 999),    # D со стр 106 до конца
+]
+
+
+def get_categories_for_page(page_num_0: int) -> list[str]:
+    """Вернуть категории для страницы (0-indexed)."""
+    result = []
+    for cat, start, end in CATEGORY_RANGES:
+        if start <= page_num_0 <= end:
+            if cat in ("C", "G", "E"):
+                if "C" not in result:
+                    result.extend(["C", "G", "E"])
+            else:
+                result.append(cat)
+    return result if result else ["base"]
 
 
 def find_pdf() -> Path:
-    """Найти PDF в корне проекта."""
     pdfs = list(PROJECT_ROOT.glob("*.pdf"))
     if not pdfs:
         raise FileNotFoundError(f"PDF не найден в {PROJECT_ROOT}")
@@ -33,16 +53,14 @@ def find_pdf() -> Path:
 
 
 def is_bold(span: dict) -> bool:
-    """Проверка жирного шрифта: flags или название шрифта."""
     flags = span.get("flags", 0)
-    if (flags & 16) != 0:  # 2**4 = bold
+    if (flags & 16) != 0:
         return True
     font = span.get("font", "") or ""
     return "Bold" in font or "bold" in font.lower()
 
 
 def collect_spans_from_page(page: fitz.Page) -> list[dict]:
-    """Собрать все span'ы с координатами и флагами."""
     blocks = page.get_text("dict", flags=fitz.TEXT_PRESERVE_WHITESPACE)
     spans = []
     for block in blocks.get("blocks", []):
@@ -61,13 +79,11 @@ def collect_spans_from_page(page: fitz.Page) -> list[dict]:
 
 
 def parse_question_number(text: str) -> int | None:
-    """Извлечь номер вопроса из '1. ' или '292.'."""
     m = re.match(r"^(\d+)\s*[\.)]\s*", text.strip())
     return int(m.group(1)) if m else None
 
 
 def parse_answer_option(text: str) -> str | None:
-    """Проверить, является ли строка вариантом A/B/C. Возвращает 'A','B','C' или None."""
     t = text.strip()
     if re.match(r"^[aA]\s*[\.\)]\s*", t):
         return "A"
@@ -79,26 +95,47 @@ def parse_answer_option(text: str) -> str | None:
 
 
 def extract_option_text(full: str, option: str) -> str:
-    """Убрать префикс 'A. ' из текста варианта."""
     return re.sub(rf"^[aA]\s*[\.\)]\s*", "", full, count=1) if option == "A" else \
            re.sub(rf"^[bB]\s*[\.\)]\s*", "", full, count=1) if option == "B" else \
            re.sub(rf"^[cC]\s*[\.\)]\s*", "", full, count=1)
 
 
-def extract_questions_from_spans(spans: list[dict]) -> list[dict]:
-    """
-    Извлечь вопросы из списка span'ов.
-    Возвращает список вопросов с полями: id, question_text, answers, correct_answer.
-    """
+def get_question_answer_bboxes(spans: list[dict], q: dict) -> tuple[tuple, tuple | None]:
+    """Получить bbox текста вопроса и вариантов по spans."""
+    q_bbox = None
+    ans_bbox = None
+    for i, s in enumerate(spans):
+        if parse_question_number(s["text"]) == q["id"]:
+            q_bbox = s["bbox"]
+            j = i + 1
+            while j < len(spans):
+                opt = parse_answer_option(spans[j]["text"])
+                if opt == "A":
+                    ans_bbox = list(spans[j]["bbox"])
+                    k = j + 1
+                    while k < len(spans) and parse_answer_option(spans[k]["text"]) in (None, "B", "C"):
+                        if parse_answer_option(spans[k]["text"]) in ("A", "B", "C"):
+                            b = spans[k]["bbox"]
+                            ans_bbox[1] = min(ans_bbox[1], b[1])
+                            ans_bbox[3] = max(ans_bbox[3], b[3])
+                        k += 1
+                    ans_bbox = tuple(ans_bbox)
+                    break
+                j += 1
+            break
+    return q_bbox or (0, 0, 0, 0), ans_bbox
+
+
+def extract_questions_with_bboxes(spans: list[dict]) -> list[dict]:
+    """Извлечь вопросы + question_bbox и answers_bbox."""
     questions = []
     i = 0
     while i < len(spans):
         s = spans[i]
         num = parse_question_number(s["text"])
         if num is not None and s["bold"]:
-            # Начало вопроса
             q_text_parts = []
-            # Текст может идти до варианта A
+            q_bbox = list(s["bbox"])
             rest = re.sub(r"^\d+\s*[\.)]\s*", "", s["text"], count=1).strip()
             if rest and not parse_answer_option(rest):
                 q_text_parts.append(rest)
@@ -110,23 +147,24 @@ def extract_questions_from_spans(spans: list[dict]) -> list[dict]:
                     break
                 if ns["bold"] and not re.match(r"^\d+\s*[\.)]", ns["text"]):
                     q_text_parts.append(ns["text"])
+                    b = ns["bbox"]
+                    q_bbox[1] = min(q_bbox[1], b[1])
+                    q_bbox[3] = max(q_bbox[3], b[3])
+                    q_bbox[0] = min(q_bbox[0], b[0])
+                    q_bbox[2] = max(q_bbox[2], b[2])
                 i += 1
 
             question_text = " ".join(q_text_parts).strip()
-
-            # Собираем варианты A, B, C
-            # Правильный ответ = вариант, у которого ТЕКСТ ответа (не метка A./B./C.) жирный
             answers = {}
             correct_answer = None
-            expected = ["A", "B", "C"]
             found_options = 0
+            answers_bbox = [float("inf"), float("inf"), -float("inf"), -float("inf")]
 
             while i < len(spans) and found_options < 3:
                 ns = spans[i]
                 opt = parse_answer_option(ns["text"])
-                if opt and opt in expected and opt not in answers:
+                if opt and opt not in answers:
                     ans_text = extract_option_text(ns["text"], opt)
-                    # Если span только "A." без текста — текст ответа в следующем span
                     content_bold = ns["bold"]
                     if len(ans_text.strip()) < 2 and i + 1 < len(spans):
                         next_span = spans[i + 1]
@@ -137,9 +175,14 @@ def extract_questions_from_spans(spans: list[dict]) -> list[dict]:
                     answers[opt] = ans_text.strip()
                     if content_bold:
                         correct_answer = opt
+                    b = ns["bbox"]
+                    answers_bbox[0] = min(answers_bbox[0], b[0])
+                    answers_bbox[1] = min(answers_bbox[1], b[1])
+                    answers_bbox[2] = max(answers_bbox[2], b[2])
+                    answers_bbox[3] = max(answers_bbox[3], b[3])
                     found_options += 1
                     i += 1
-                elif opt and opt in expected:
+                elif opt:
                     break
                 elif parse_question_number(ns["text"]) is not None and ns["bold"]:
                     break
@@ -147,26 +190,27 @@ def extract_questions_from_spans(spans: list[dict]) -> list[dict]:
                     if answers:
                         last_key = list(answers.keys())[-1]
                         answers[last_key] = (answers[last_key] + " " + ns["text"]).strip()
+                        b = ns["bbox"]
+                        answers_bbox[3] = max(answers_bbox[3], b[3])
                     i += 1
 
             if len(answers) == 3 and correct_answer:
+                ab = tuple(answers_bbox) if answers_bbox[0] != float("inf") else None
                 questions.append({
                     "id": num,
                     "question_original": question_text,
                     "answers_original": answers,
                     "correct_answer": correct_answer,
-                    "image": None,  # заполним позже
+                    "image": None,
+                    "_q_bbox": tuple(q_bbox),
+                    "_ans_bbox": ab,
                 })
             continue
         i += 1
     return questions
 
 
-def extract_images_from_page(doc: fitz.Document, page: fitz.Page, page_num: int) -> list[tuple[int, bytes, tuple]]:
-    """
-    Извлечь изображения со страницы. Возвращает список (xref, image_bytes, bbox).
-    Отфильтровываем мелкие картинки (логотипы).
-    """
+def extract_images_from_page(doc: fitz.Document, page: fitz.Page) -> list[tuple[int, bytes, tuple, str]]:
     result = []
     for img in page.get_images():
         xref = img[0]
@@ -176,7 +220,6 @@ def extract_images_from_page(doc: fitz.Document, page: fitz.Page, page_num: int)
             ext = base.get("ext", "png")
             if ext.lower() == "jpg":
                 ext = "jpeg"
-            # Получить bbox для этого изображения
             rects = page.get_image_rects(xref)
             if not rects:
                 continue
@@ -184,7 +227,6 @@ def extract_images_from_page(doc: fitz.Document, page: fitz.Page, page_num: int)
             bbox = (rect.x0, rect.y0, rect.x1, rect.y1)
             h = bbox[3] - bbox[1]
             x0 = bbox[0]
-            # Пропускаем мелкие и справа (шапка)
             if h >= MIN_IMAGE_HEIGHT and x0 <= MAX_IMAGE_X_FOR_CONTENT:
                 result.append((xref, img_bytes, bbox, ext))
         except Exception:
@@ -192,62 +234,79 @@ def extract_images_from_page(doc: fitz.Document, page: fitz.Page, page_num: int)
     return result
 
 
-def associate_images_with_questions(
-    page_questions: list[dict],
-    page_images: list[tuple[int, bytes, tuple, str]],
-    question_bboxes: list[tuple],
+def distance_rect_to_point(rect: tuple, center_y: float) -> float:
+    """Расстояние от bbox до вертикальной линии (по центру вопроса)."""
+    r = rect
+    cy = (r[1] + r[3]) / 2
+    return abs(cy - center_y)
+
+
+def image_near_question(
+    img_bbox: tuple,
+    q_bbox: tuple,
+    ans_bbox: tuple | None,
+) -> bool:
+    """
+    Тип 1: [IMG] [вопрос] — слева от текста
+    Тип 2: вопрос, [IMG] [A B C] — между вопросом и ответами
+    Тип 3: вопрос, [IMG], A B C — ниже вопроса
+    """
+    ix0, iy0, ix1, iy1 = img_bbox
+    qx0, qy0, qx1, qy1 = q_bbox
+    img_cy = (iy0 + iy1) / 2
+    q_cy = (qy0 + qy1) / 2
+    q_height = qy1 - qy0
+
+    # Вертикальная близость (центр изображения рядом с блоком вопроса)
+    vert_overlap = abs(img_cy - q_cy) < max(200, q_height + 100)
+
+    # Слева от текста (тип 1)
+    if ix1 < qx0 + 80 and vert_overlap:
+        return True
+    # Между вопросом и ответами (тип 2)
+    if ans_bbox:
+        ay0 = ans_bbox[1]
+        if qy1 - 30 < img_cy < ay0 + 80 and ix0 < qx1 + 150:
+            return True
+    # Ниже/на уровне вопроса, слева (тип 3)
+    if iy0 >= qy0 - 80 and iy1 <= qy1 + 350 and ix0 < 250:
+        return True
+    return False
+
+
+def associate_image_to_question(
+    questions: list[dict],
+    page_imgs: list[tuple],
+    spans: list[dict],
 ) -> dict[int, tuple[bytes, str]]:
-    """
-    Привязать изображения к вопросам по вертикали.
-    question_bboxes: (y0, y1) для каждого вопроса.
-    Возвращает {question_id: (image_bytes, ext)}.
-    """
+    """Привязка: ближайшее изображение слева/между/ниже вопроса. Одно изображение — один вопрос."""
     mapping = {}
-    # Сортируем изображения по y
-    imgs_sorted = sorted(page_images, key=lambda x: (x[2][1] + x[2][3]) / 2)
-    q_sorted = sorted(
-        enumerate(page_questions),
-        key=lambda x: (question_bboxes[x[0]][0] + question_bboxes[x[0]][1]) / 2
-    )
-    # Простое сопоставление: по порядку или по ближайшему по вертикали
-    for q_idx, q in q_sorted:
-        q_id = q["id"]
-        if q_idx < len(imgs_sorted):
-            xref, ib, bbox, ext = imgs_sorted[q_idx]
-            mapping[q_id] = (ib, ext)
+    used_imgs = set()
+    for q in questions:
+        q_bbox, ans_bbox = get_question_answer_bboxes(spans, q)
+        q_cy = (q_bbox[1] + q_bbox[3]) / 2
+
+        best = None
+        best_dist = float("inf")
+        best_ji = -1
+        for ji, (xref, ib, bbox, ext) in enumerate(page_imgs):
+            if ji in used_imgs:
+                continue
+            if not image_near_question(bbox, q_bbox, ans_bbox):
+                continue
+            d = distance_rect_to_point(bbox, q_cy)
+            if d < best_dist:
+                best_dist = d
+                best = (ib, ext)
+                best_ji = ji
+
+        if best is not None:
+            mapping[q["id"]] = best
+            used_imgs.add(best_ji)
     return mapping
 
 
-def get_question_bboxes(spans: list[dict], questions: list[dict]) -> list[tuple]:
-    """Оценка bbox для каждого вопроса по spans."""
-    bboxes = []
-    # Упрощённо: используем позицию номера вопроса
-    i = 0
-    for q in questions:
-        qid = q["id"]
-        while i < len(spans):
-            num = parse_question_number(spans[i]["text"])
-            if num == qid:
-                bbox = spans[i]["bbox"]
-                y0, y1 = bbox[1], bbox[3]
-                # Примерная высота блока вопроса
-                j = i + 1
-                while j < len(spans):
-                    if parse_question_number(spans[j]["text"]) is not None and spans[j]["bold"] and j > i:
-                        break
-                    if parse_answer_option(spans[j]["text"]):
-                        y1 = max(y1, spans[j]["bbox"][3])
-                    j += 1
-                    if j - i > 20:
-                        break
-                bboxes.append((y0, y1))
-                break
-            i += 1
-    return bboxes
-
-
 def run_parser(pdf_path: Path | None = None) -> list[dict]:
-    """Основной запуск парсера."""
     pdf_path = pdf_path or find_pdf()
     IMAGES_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -255,64 +314,46 @@ def run_parser(pdf_path: Path | None = None) -> list[dict]:
     all_questions = []
     all_images_to_save: dict[int, tuple[bytes, str]] = {}
 
-    # Пропускаем обложку и оглавление (стр 1–2)
-    start_page = 2
+    start_page = 2  # пропуск обложки и оглавления
     for page_num in range(start_page, len(doc)):
         page = doc[page_num]
         spans = collect_spans_from_page(page)
-        questions = extract_questions_from_spans(spans)
+        questions = extract_questions_with_bboxes(spans)
 
-        # Извлекаем изображения
-        page_imgs = extract_images_from_page(doc, page, page_num)
-        if not page_imgs:
+        # page_num 0-indexed в PDF. Контент со стр 3 (индекс 2). Нумеруем контент с 1
+        content_page_0 = page_num - start_page
+        for q in questions:
+            q["page"] = page_num + 1  # печатная страница PDF
+            q["categories"] = get_categories_for_page(content_page_0)
+
+        page_imgs = extract_images_from_page(doc, page)
+        if page_imgs:
+            img_map = associate_image_to_question(
+                questions,
+                page_imgs,
+                spans,
+            )
+            for qid, (ib, ext) in img_map.items():
+                all_images_to_save[qid] = (ib, ext)
+
+            for q in questions:
+                qid = q["id"]
+                q.pop("_q_bbox", None)
+                q.pop("_ans_bbox", None)
+                if qid in all_images_to_save:
+                    ext = all_images_to_save[qid][1]
+                    ext = "png" if ext in ("png", "jpeg", "jpg") else "png"
+                    q["image"] = f"/images/q_{qid}.{ext}"
+                else:
+                    q["image"] = None
+        else:
             for q in questions:
                 q["image"] = None
-            all_questions.extend(questions)
-            continue
+                q.pop("_q_bbox", None)
+                q.pop("_ans_bbox", None)
 
-        # Bbox вопросов (упрощённо — по первому span номера)
-        bboxes = []
-        for q in questions:
-            for s in spans:
-                num = parse_question_number(s["text"])
-                if num == q["id"]:
-                    bboxes.append((s["bbox"][1], s["bbox"][3] + 150))
-                    break
-            else:
-                bboxes.append((0, 200))
+        all_questions.extend(questions)
 
-        # Сопоставление: по порядку (1 img на 1 вопрос если поровну, иначе по вертикали)
-        q_centers = [(b[0] + b[1]) / 2 for b in bboxes]
-        img_centers = [(x[2][1] + x[2][3]) / 2 for x in page_imgs]
-
-        used_imgs = set()
-        for qi, q in enumerate(questions):
-            best_img = None
-            best_dist = float("inf")
-            for ji, (xref, ib, bbox, ext) in enumerate(page_imgs):
-                if ji in used_imgs:
-                    continue
-                cy = (bbox[1] + bbox[3]) / 2
-                dist = abs(cy - q_centers[qi])
-                if dist < best_dist:
-                    best_dist = dist
-                    best_img = (ji, ib, ext)
-            if best_img:
-                ji, ib, ext = best_img
-                used_imgs.add(ji)
-                all_images_to_save[q["id"]] = (ib, ext)
-
-        for q in questions:
-            if q["id"] in all_images_to_save:
-                ext = all_images_to_save[q["id"]][1]
-                ext = "png" if ext in ("png", "jpeg", "jpg") else "png"
-                rel_path = f"/images/q_{q['id']}.{ext}"
-                q["image"] = rel_path
-            else:
-                q["image"] = None
-            all_questions.extend([q])
-
-    # Убираем дубликаты по id (оставляем первое вхождение)
     seen = set()
     unique = []
     for q in all_questions:
@@ -320,20 +361,17 @@ def run_parser(pdf_path: Path | None = None) -> list[dict]:
             seen.add(q["id"])
             unique.append(q)
 
-    # Добавляем question_ru, answers_ru как пустые (заполнит translate.py)
     for q in unique:
         q.setdefault("question_ru", "")
         q.setdefault("answers_ru", {})
 
-    # Сохраняем изображения
     for qid, (img_bytes, ext) in all_images_to_save.items():
         ext = "png" if ext in ("png", "jpeg", "jpg") else "png"
-        path = IMAGES_DIR / f"q_{qid}.{ext}"
-        with open(path, "wb") as f:
+        p = IMAGES_DIR / f"q_{qid}.{ext}"
+        with open(p, "wb") as f:
             f.write(img_bytes)
 
     doc.close()
-
     return unique
 
 
@@ -348,7 +386,6 @@ def main():
 
     print(f"Сохранено {len(questions)} вопросов в {OUTPUT_JSON}")
 
-    # Запуск валидации
     sys.path.insert(0, str(PROJECT_ROOT))
     from parser.validate import validate_and_log
     validate_and_log(questions)
