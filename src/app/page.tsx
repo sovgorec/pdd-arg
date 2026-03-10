@@ -23,6 +23,7 @@ export default function Home() {
   const [selected, setSelected] = useState<string | null>(null);
   const [filterOpen, setFilterOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
+  const [copiedField, setCopiedField] = useState<"alias" | "id" | null>(null);
   const [selectedCats, setSelectedCats] = useState<Set<string>>(new Set(["generales"]));
   const [onlyWithImages, setOnlyWithImages] = useState(false);
   const [onlyErrors, setOnlyErrors] = useState(false);
@@ -120,9 +121,11 @@ export default function Home() {
     buildOrder();
   };
 
-  const copyToClipboard = useCallback(async (text: string) => {
+  const copyToClipboard = useCallback(async (text: string, field: "alias" | "id") => {
     try {
       await navigator.clipboard.writeText(text);
+      setCopiedField(field);
+      setTimeout(() => setCopiedField(null), 1500);
     } catch {
       // ignore
     }
@@ -166,9 +169,9 @@ export default function Home() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-stone-100">
-      {/* Верх: статистика + фильтр */}
-      <div className="flex-shrink-0 border-b border-stone-200 bg-white px-4 py-3">
+    <div className="flex min-h-screen flex-col overflow-hidden bg-stone-100">
+      {/* Верх: статистика + фильтр — фиксирован */}
+      <div className="sticky top-0 z-10 flex-shrink-0 border-b border-stone-200 bg-white px-4 py-3">
         <div className="mx-auto flex max-w-2xl items-center justify-between">
           <div className="flex items-center gap-4 text-sm text-stone-900">
             <span>Серия: <strong>{currentStreak}</strong></span>
@@ -208,8 +211,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Скроллируемый контент */}
-      <div className="min-h-0 flex-1 overflow-y-auto">
+      {/* Скроллируемый контент — отступ снизу под фиксированную панель */}
+      <div className="min-h-0 flex-1 overflow-y-auto overflow-x-hidden pb-[320px]">
         <div className="mx-auto max-w-2xl p-4">
           <div className="rounded-lg bg-white p-6 shadow-sm text-stone-900">
             <div className="mb-4">
@@ -245,8 +248,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Фиксированная нижняя зона */}
-      <div className="flex-shrink-0 border-t border-stone-200 bg-white p-4">
+      {/* Фиксированная нижняя зона — закреплена снизу, не тянется */}
+      <div className="fixed bottom-0 left-0 right-0 z-10 border-t border-stone-200 bg-white p-4">
         <div className="mx-auto max-w-2xl">
           {/* Варианты ответов — большая зона клика */}
           <div className="flex flex-col gap-2">
@@ -423,39 +426,43 @@ export default function Home() {
 
             <section className="mb-4">
               <p className="mb-2 text-sm text-stone-600">Мой алиас</p>
-              <div className="flex items-center gap-2 rounded-lg border border-stone-200 bg-stone-50 px-3 py-2">
+              <button
+                type="button"
+                onClick={() => copyToClipboard("sovgorec", "alias")}
+                className={`flex w-full cursor-pointer items-center gap-2 rounded-lg border-2 px-3 py-2 text-left transition-colors ${
+                  copiedField === "alias" ? "border-green-500 bg-green-50" : "border-stone-200 bg-stone-50 active:bg-stone-100"
+                }`}
+              >
                 <span className="min-w-0 flex-1 truncate text-stone-900">sovgorec</span>
-                <button
-                  type="button"
-                  onClick={() => copyToClipboard("sovgorec")}
-                  className="flex-shrink-0 rounded p-1.5 text-stone-500 hover:bg-stone-200"
-                  title="Копировать"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
-                    <path d="M4 16V4a2 2 0 0 1 2-2h12" />
-                  </svg>
-                </button>
-              </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="flex-shrink-0 text-stone-500">
+                  <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+                  <path d="M4 16V4a2 2 0 0 1 2-2h12" />
+                </svg>
+              </button>
             </section>
 
             <section className="mb-6">
               <p className="mb-2 text-sm text-stone-600">Мой Bybit UID</p>
-              <div className="flex items-center gap-2 rounded-lg border border-stone-200 bg-stone-50 px-3 py-2">
+              <button
+                type="button"
+                onClick={() => copyToClipboard("107944611", "id")}
+                className={`flex w-full cursor-pointer items-center gap-2 rounded-lg border-2 px-3 py-2 text-left transition-colors ${
+                  copiedField === "id" ? "border-green-500 bg-green-50" : "border-stone-200 bg-stone-50 active:bg-stone-100"
+                }`}
+              >
                 <span className="min-w-0 flex-1 truncate font-mono text-sm text-stone-900">107944611</span>
-                <button
-                  type="button"
-                  onClick={() => copyToClipboard("sovgorec.pdd-arg")}
-                  className="flex-shrink-0 rounded p-1.5 text-stone-500 hover:bg-stone-200"
-                  title="Копировать"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
-                    <path d="M4 16V4a2 2 0 0 1 2-2h12" />
-                  </svg>
-                </button>
-              </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="flex-shrink-0 text-stone-500">
+                  <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+                  <path d="M4 16V4a2 2 0 0 1 2-2h12" />
+                </svg>
+              </button>
             </section>
+
+            {copiedField && (
+              <p className="mb-4 rounded-lg bg-green-100 py-2 text-center text-sm font-medium text-green-800">
+                Скопировано
+              </p>
+            )}
 
             <p className="text-center text-sm text-stone-500">
               Возможны ошибки, которыя я найду и поправлю, если кто-то пришлет пожертвование
