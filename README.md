@@ -43,23 +43,14 @@ python parser/translate.py
 ### 4. Веб-приложение
 
 ```bash
-cd web && npm install && npm run dev
+npm install && npm run dev
 ```
 
 Откройте http://localhost:3000
 
-## Деплой на GitHub и Vercel
+## Деплой на Vercel
 
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/sovgorec/pdd-arg.git
-git push -u origin main
-```
-
-Затем на [Vercel](https://vercel.com): Import → укажите **Root Directory** `web` → Deploy. Данные (`data/`, `images/`) копируются в `public/` при сборке.
+Репозиторий настроен для деплоя из корня. Import в [Vercel](https://vercel.com) → Deploy. При сборке данные копируются в `public/`.
 
 ## Возможности
 
