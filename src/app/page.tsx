@@ -39,9 +39,10 @@ export default function Home() {
   };
 
   const filteredQuestions = questions.filter((q) => {
-    const cats = q.categories || [];
-    const hasCat = cats.some((c) => selectedCats.has(c));
-    if (!hasCat) return false;
+    if (selectedCats.size > 0) {
+      const cats = q.categories || [];
+      if (!cats.some((cat) => selectedCats.has(cat))) return false;
+    }
     if (onlyWithImages && !q.image) return false;
     if (onlyErrors && !storage.wrongIds.includes(q.id)) return false;
     return true;
