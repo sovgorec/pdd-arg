@@ -8,7 +8,7 @@
       "C": "Adultos mayores de 35 años."
     },
     "correct_answer": "B",
-    "image": "/images/q_2.png",
+    "image": null,
     "page": 3,
     "categories": [
       "base"
@@ -239,7 +239,7 @@
       "C": "Ambas respuestas, la A y la B, son correctas."
     },
     "correct_answer": "C",
-    "image": "/images/q_16.png",
+    "image": null,
     "page": 5,
     "categories": [
       "base"
@@ -281,7 +281,7 @@
       "C": "Comodidad y agilidad."
     },
     "correct_answer": "B",
-    "image": "/images/q_18.png",
+    "image": null,
     "page": 5,
     "categories": [
       "base"
@@ -323,7 +323,7 @@
       "C": "Ambas respuestas, A y B, son correctas."
     },
     "correct_answer": "B",
-    "image": null,
+    "image": "/images/q_20.png",
     "page": 5,
     "categories": [
       "base"
@@ -344,7 +344,7 @@
       "C": "Es indistinto."
     },
     "correct_answer": "A",
-    "image": null,
+    "image": "/images/q_21.png",
     "page": 5,
     "categories": [
       "base"
@@ -407,7 +407,7 @@
       "C": "Opción C."
     },
     "correct_answer": "A",
-    "image": "/images/q_24.png",
+    "image": null,
     "page": 6,
     "categories": [
       "base"
@@ -575,7 +575,7 @@
       "C": "Ambas respuestas, A y B, son correctas."
     },
     "correct_answer": "C",
-    "image": "/images/q_32.png",
+    "image": null,
     "page": 7,
     "categories": [
       "base"
@@ -596,7 +596,7 @@
       "C": "30 km/h."
     },
     "correct_answer": "B",
-    "image": "/images/q_33.png",
+    "image": null,
     "page": 7,
     "categories": [
       "base"
@@ -617,7 +617,7 @@
       "C": "Lo suficiente para no tocarlo."
     },
     "correct_answer": "A",
-    "image": null,
+    "image": "/images/q_34.png",
     "page": 7,
     "categories": [
       "base"
@@ -890,7 +890,7 @@
       "C": "Por la esquina, por la prolongación longitudinal de la vereda sobre la calle."
     },
     "correct_answer": "C",
-    "image": "/images/q_50.png",
+    "image": null,
     "page": 10,
     "categories": [
       "base"
@@ -995,7 +995,7 @@
       "C": "Cruce de bicicletas."
     },
     "correct_answer": "A",
-    "image": null,
+    "image": "/images/q_55.png",
     "page": 10,
     "categories": [
       "base"
@@ -1037,7 +1037,7 @@
       "C": "Lugar por donde circulan ambulancias, bomberos y/o vehículos policiales, en cumplimiento o no de sus"
     },
     "correct_answer": "B",
-    "image": "/images/q_57.png",
+    "image": null,
     "page": 11,
     "categories": [
       "base"
@@ -1121,7 +1121,7 @@
       "C": "Calle con Bicisenda."
     },
     "correct_answer": "A",
-    "image": null,
+    "image": "/images/q_61.png",
     "page": 11,
     "categories": [
       "base"
@@ -1646,7 +1646,7 @@
       "C": "Sólo está prohibido modificar la placa de dominio trasera, no así la delantera."
     },
     "correct_answer": "B",
-    "image": "/images/q_92.png",
+    "image": null,
     "page": 16,
     "categories": [
       "base"
@@ -1667,7 +1667,7 @@
       "C": "Ambas respuestas, A y B, son correctas."
     },
     "correct_answer": "B",
-    "image": null,
+    "image": "/images/q_93.png",
     "page": 16,
     "categories": [
       "base"
@@ -1835,7 +1835,7 @@
       "C": "Ambas respuestas, la A y la B, son correctas."
     },
     "correct_answer": "C",
-    "image": "/images/q_103.png",
+    "image": null,
     "page": 17,
     "categories": [
       "base"
@@ -1856,7 +1856,7 @@
       "C": "Sí, puede afectar la coordinación, la atención y el tiempo de reacción."
     },
     "correct_answer": "C",
-    "image": "/images/q_104.png",
+    "image": null,
     "page": 17,
     "categories": [
       "base"
@@ -1919,7 +1919,7 @@
       "C": "Sí, la misma se toma como una presunción de alcoholemia"
     },
     "correct_answer": "C",
-    "image": null,
+    "image": "/images/q_107.png",
     "page": 17,
     "categories": [
       "base"
@@ -2129,7 +2129,7 @@
       "C": "Ambas respuestas, A y B, son correctas."
     },
     "correct_answer": "C",
-    "image": "/images/q_117.png",
+    "image": null,
     "page": 19,
     "categories": [
       "base"
@@ -2150,7 +2150,7 @@
       "C": "Es inmediato, no transcurre tiempo entre estas acciones."
     },
     "correct_answer": "A",
-    "image": "/images/q_119.png",
+    "image": null,
     "page": 19,
     "categories": [
       "base"
@@ -2171,7 +2171,7 @@
       "C": "No, ya que el vehículo no está en movimiento."
     },
     "correct_answer": "B",
-    "image": null,
+    "image": "/images/q_120.png",
     "page": 19,
     "categories": [
       "base"
@@ -2192,7 +2192,7 @@
       "C": "Ambos sistemas son riesgosos."
     },
     "correct_answer": "C",
-    "image": "/images/q_121.png",
+    "image": null,
     "page": 19,
     "categories": [
       "base"
@@ -2255,7 +2255,7 @@
       "C": "Al tratarse de una llamada de urgencia, no importa donde se realice."
     },
     "correct_answer": "A",
-    "image": "/images/q_124.png",
+    "image": null,
     "page": 20,
     "categories": [
       "base"
@@ -2297,7 +2297,7 @@
       "C": "Señalización; Normas legales de carácter general; Indicaciones de la autoridad competente."
     },
     "correct_answer": "B",
-    "image": "/images/q_127.png",
+    "image": null,
     "page": 20,
     "categories": [
       "base"
@@ -2360,7 +2360,7 @@
       "C": "Que continúe avanzando."
     },
     "correct_answer": "B",
-    "image": null,
+    "image": "/images/q_130.png",
     "page": 20,
     "categories": [
       "base"
@@ -2402,7 +2402,7 @@
       "C": "Detenerme y esperar hasta que la barrera se levante, salvo que"
     },
     "correct_answer": "A",
-    "image": "/images/q_134.png",
+    "image": null,
     "page": 21,
     "categories": [
       "base"
@@ -2507,7 +2507,7 @@
       "C": "Avanzar rápidamente si el vehículo que cruza todavía"
     },
     "correct_answer": "B",
-    "image": "/images/q_141.png",
+    "image": null,
     "page": 22,
     "categories": [
       "base"
@@ -2591,7 +2591,7 @@
       "C": "Significa que sólo pueden circular vehículos particulares."
     },
     "correct_answer": "B",
-    "image": "/images/q_145.png",
+    "image": null,
     "page": 23,
     "categories": [
       "base"
@@ -2696,7 +2696,7 @@
       "C": "El color, además de su forma, brinda información al conductor sobre el trayecto de la vía por la"
     },
     "correct_answer": "C",
-    "image": "/images/q_150.png",
+    "image": null,
     "page": 24,
     "categories": [
       "base"
@@ -2738,7 +2738,7 @@
       "C": "Transmiten órdenes específicas, de cumplimiento obligatorio en el lugar para el cual están"
     },
     "correct_answer": "C",
-    "image": "/images/q_152.png",
+    "image": null,
     "page": 24,
     "categories": [
       "base"
@@ -2759,7 +2759,7 @@
       "C": "La señal C."
     },
     "correct_answer": "B",
-    "image": null,
+    "image": "/images/q_153.png",
     "page": 24,
     "categories": [
       "base"
@@ -2780,7 +2780,7 @@
       "C": "Rojo."
     },
     "correct_answer": "A",
-    "image": "/images/q_154.png",
+    "image": null,
     "page": 24,
     "categories": [
       "base"
@@ -2801,7 +2801,7 @@
       "C": "La señal C."
     },
     "correct_answer": "B",
-    "image": null,
+    "image": "/images/q_155.png",
     "page": 24,
     "categories": [
       "base"
@@ -2822,7 +2822,7 @@
       "C": "La señal C."
     },
     "correct_answer": "C",
-    "image": null,
+    "image": "/images/q_156.png",
     "page": 24,
     "categories": [
       "base"
@@ -2986,7 +2986,7 @@
       "C": "Dar lugar a este vehículo, despejar el carril de emergencias y"
     },
     "correct_answer": "C",
-    "image": "/images/q_165.png",
+    "image": null,
     "page": 26,
     "categories": [
       "base"
@@ -3007,7 +3007,7 @@
       "C": "Alertar a otros conductores, tocando repetidamente la bocina, que ese"
     },
     "correct_answer": "A",
-    "image": "/images/q_166.png",
+    "image": null,
     "page": 26,
     "categories": [
       "base"
@@ -3049,7 +3049,7 @@
       "C": "El vehículo A, ya que está saliendo del paso a nivel"
     },
     "correct_answer": "C",
-    "image": "/images/q_168.png",
+    "image": null,
     "page": 26,
     "categories": [
       "base"
@@ -3091,7 +3091,7 @@
       "C": "Avanzar."
     },
     "correct_answer": "B",
-    "image": "/images/q_173.png",
+    "image": null,
     "page": 27,
     "categories": [
       "base"
@@ -3112,7 +3112,7 @@
       "C": "Avanzar."
     },
     "correct_answer": "B",
-    "image": "/images/q_175.png",
+    "image": null,
     "page": 27,
     "categories": [
       "base"
@@ -3133,7 +3133,7 @@
       "C": "Es indistinto, ya que el vehículo que circula por la derecha siempre tiene prioridad."
     },
     "correct_answer": "B",
-    "image": "/images/q_176.png",
+    "image": null,
     "page": 28,
     "categories": [
       "base"
@@ -3154,7 +3154,7 @@
       "C": "El vehículo que se presenta por el lado derecho."
     },
     "correct_answer": "C",
-    "image": "/images/q_177.png",
+    "image": null,
     "page": 28,
     "categories": [
       "base"
@@ -3175,7 +3175,7 @@
       "C": "Es indistinto."
     },
     "correct_answer": "B",
-    "image": null,
+    "image": "/images/q_178.png",
     "page": 28,
     "categories": [
       "base"
@@ -3196,7 +3196,7 @@
       "C": "El vehículo que se encuentra dentro de la calzada circular."
     },
     "correct_answer": "C",
-    "image": "/images/q_179.png",
+    "image": null,
     "page": 28,
     "categories": [
       "base"
@@ -3217,7 +3217,7 @@
       "C": "La normativa no establece prioridad de paso ante esta"
     },
     "correct_answer": "A",
-    "image": null,
+    "image": "/images/q_180.png",
     "page": 28,
     "categories": [
       "base"
@@ -3259,7 +3259,7 @@
       "C": "Es indistinto."
     },
     "correct_answer": "B",
-    "image": null,
+    "image": "/images/q_182.png",
     "page": 28,
     "categories": [
       "base"
@@ -3280,7 +3280,7 @@
       "C": "No hay prioridad, cualquiera de ellos."
     },
     "correct_answer": "B",
-    "image": "/images/q_183.png",
+    "image": null,
     "page": 29,
     "categories": [
       "base"
@@ -3301,7 +3301,7 @@
       "C": "Nunca, independientemente de cómo se encuentre el tránsito vehicular."
     },
     "correct_answer": "B",
-    "image": "/images/q_185.png",
+    "image": null,
     "page": 29,
     "categories": [
       "base"
@@ -3364,7 +3364,7 @@
       "C": "Sí, haciendo las señales de luces correspondientes y si el vehículo"
     },
     "correct_answer": "B",
-    "image": null,
+    "image": "/images/q_188.png",
     "page": 29,
     "categories": [
       "base"
@@ -3427,7 +3427,7 @@
       "C": "Incorporarse al carril derecho, aunque esto implique que otro vehículo deba modificar su velocidad."
     },
     "correct_answer": "B",
-    "image": "/images/q_192.png",
+    "image": null,
     "page": 30,
     "categories": [
       "base"
@@ -3469,7 +3469,7 @@
       "C": "Tocar bocina y hacer guiño de luces para indicarle que no debe"
     },
     "correct_answer": "B",
-    "image": null,
+    "image": "/images/q_195.png",
     "page": 30,
     "categories": [
       "base"
@@ -3490,7 +3490,7 @@
       "C": "Ambas respuestas, A y B, son correctas."
     },
     "correct_answer": "B",
-    "image": "/images/q_197.png",
+    "image": null,
     "page": 31,
     "categories": [
       "base"
@@ -3532,7 +3532,7 @@
       "C": "El que circula más próximo al vehículo que se desea sobrepasar."
     },
     "correct_answer": "C",
-    "image": "/images/q_199.png",
+    "image": null,
     "page": 31,
     "categories": [
       "base"
@@ -3595,7 +3595,7 @@
       "C": "El vehículo C."
     },
     "correct_answer": "C",
-    "image": null,
+    "image": "/images/q_202.png",
     "page": 31,
     "categories": [
       "base"
@@ -3658,7 +3658,7 @@
       "C": "Ambas respuestas, A y B, son correctas."
     },
     "correct_answer": "C",
-    "image": "/images/q_205.png",
+    "image": null,
     "page": 32,
     "categories": [
       "base"
@@ -3679,7 +3679,7 @@
       "C": "Sí, si hay suficiente visibilidad."
     },
     "correct_answer": "B",
-    "image": "/images/q_206.png",
+    "image": null,
     "page": 32,
     "categories": [
       "base"
@@ -3700,7 +3700,7 @@
       "C": "Ambas respuestas, A y B, son correctas."
     },
     "correct_answer": "C",
-    "image": "/images/q_207.png",
+    "image": null,
     "page": 32,
     "categories": [
       "base"
@@ -3721,7 +3721,7 @@
       "C": "Sólo si no se perjudica la circulación de otros vehículos."
     },
     "correct_answer": "B",
-    "image": null,
+    "image": "/images/q_208.png",
     "page": 32,
     "categories": [
       "base"
@@ -3763,7 +3763,7 @@
       "C": "Que es una zona que se puede circular sobre ella."
     },
     "correct_answer": "B",
-    "image": null,
+    "image": "/images/q_210.png",
     "page": 32,
     "categories": [
       "base"
@@ -3784,7 +3784,7 @@
       "C": "Realizar maniobras de sobrepaso."
     },
     "correct_answer": "C",
-    "image": "/images/q_211.png",
+    "image": null,
     "page": 33,
     "categories": [
       "base"
@@ -3826,7 +3826,7 @@
       "C": "Ambas respuestas, A y B, son correctas."
     },
     "correct_answer": "C",
-    "image": "/images/q_214.png",
+    "image": null,
     "page": 33,
     "categories": [
       "base"
@@ -3868,7 +3868,7 @@
       "C": "No, ya que es una vía de doble sentido de circulación."
     },
     "correct_answer": "A",
-    "image": null,
+    "image": "/images/q_217.png",
     "page": 33,
     "categories": [
       "base"
@@ -3952,7 +3952,7 @@
       "C": "90 km/h."
     },
     "correct_answer": "A",
-    "image": "/images/q_221.png",
+    "image": null,
     "page": 34,
     "categories": [
       "base"
@@ -3973,7 +3973,7 @@
       "C": "30 km/h."
     },
     "correct_answer": "B",
-    "image": null,
+    "image": "/images/q_223.png",
     "page": 34,
     "categories": [
       "base"
@@ -4015,7 +4015,7 @@
       "C": "Cuando se ingresa a la nueva vía de circulación."
     },
     "correct_answer": "B",
-    "image": "/images/q_226.png",
+    "image": null,
     "page": 35,
     "categories": [
       "base"
@@ -4099,7 +4099,7 @@
       "C": "30 kilómetros por hora."
     },
     "correct_answer": "C",
-    "image": null,
+    "image": "/images/q_230.png",
     "page": 35,
     "categories": [
       "base"
@@ -4120,7 +4120,7 @@
       "C": "Es igual a la mínima establecida para el tipo de arteria correspondiente."
     },
     "correct_answer": "C",
-    "image": "/images/q_231.png",
+    "image": null,
     "page": 36,
     "categories": [
       "base"
@@ -4162,7 +4162,7 @@
       "C": "30 kilómetros por hora."
     },
     "correct_answer": "B",
-    "image": null,
+    "image": "/images/q_233.png",
     "page": 36,
     "categories": [
       "base"
@@ -4267,7 +4267,7 @@
       "C": "Son responsables de la mayoría de los incidentes fatales, cualquiera sea la vía de circulación."
     },
     "correct_answer": "C",
-    "image": "/images/q_239.png",
+    "image": null,
     "page": 37,
     "categories": [
       "base"
@@ -4288,7 +4288,7 @@
       "C": "La línea de edificación transversal."
     },
     "correct_answer": "B",
-    "image": "/images/q_242.png",
+    "image": null,
     "page": 37,
     "categories": [
       "base"
@@ -4309,7 +4309,7 @@
       "C": "Mantener la misma velocidad antes de la curva y acelerar"
     },
     "correct_answer": "B",
-    "image": "/images/q_243.png",
+    "image": null,
     "page": 37,
     "categories": [
       "base"
@@ -4330,7 +4330,7 @@
       "C": "Dar vuelta a la izquierda y después a la derecha"
     },
     "correct_answer": "A",
-    "image": null,
+    "image": "/images/q_244.png",
     "page": 37,
     "categories": [
       "base"
@@ -4393,7 +4393,7 @@
       "C": "No existe una distancia mínima."
     },
     "correct_answer": "A",
-    "image": "/images/q_248.png",
+    "image": null,
     "page": 38,
     "categories": [
       "base"
@@ -4414,7 +4414,7 @@
       "C": "Si, a menos que haya una señal que lo prohíba"
     },
     "correct_answer": "B",
-    "image": "/images/q_249.png",
+    "image": null,
     "page": 38,
     "categories": [
       "base"
@@ -4477,7 +4477,7 @@
       "C": "Con las luces intermitentes (balizas)."
     },
     "correct_answer": "C",
-    "image": "/images/q_254.png",
+    "image": null,
     "page": 39,
     "categories": [
       "base"
@@ -4603,7 +4603,7 @@
       "C": "Al estado resbaladizo en el que se encuentra la calzada luego de una llovizna."
     },
     "correct_answer": "B",
-    "image": "/images/q_262.png",
+    "image": null,
     "page": 40,
     "categories": [
       "base"
@@ -4624,7 +4624,7 @@
       "C": "Lo único que debería hacer es respetar es la velocidad máxima de"
     },
     "correct_answer": "B",
-    "image": "/images/q_263.png",
+    "image": null,
     "page": 40,
     "categories": [
       "base"
@@ -4666,7 +4666,7 @@
       "C": "No, porque justamente los frenos sirven para contrarrestar los efectos de la calzada resbaladiza."
     },
     "correct_answer": "B",
-    "image": "/images/q_266.png",
+    "image": null,
     "page": 41,
     "categories": [
       "base"
@@ -4771,7 +4771,7 @@
       "C": "Mayor que cuando la calzada se encuentra seca."
     },
     "correct_answer": "C",
-    "image": null,
+    "image": "/images/q_272.png",
     "page": 41,
     "categories": [
       "base"
@@ -4792,7 +4792,7 @@
       "C": "No, porque este efecto se produce en rutas con poca"
     },
     "correct_answer": "A",
-    "image": "/images/q_273.png",
+    "image": null,
     "page": 42,
     "categories": [
       "base"
@@ -4834,7 +4834,7 @@
       "C": "Detenerse en la banquina hasta que levante el banco de niebla."
     },
     "correct_answer": "B",
-    "image": "/images/q_275.png",
+    "image": null,
     "page": 42,
     "categories": [
       "base"
@@ -4939,7 +4939,7 @@
       "C": "Ambas respuestas, la A y la B, son correctas."
     },
     "correct_answer": "B",
-    "image": "/images/q_281.png",
+    "image": null,
     "page": 43,
     "categories": [
       "base"
@@ -4960,7 +4960,7 @@
       "C": "Continuar a baja velocidad, manteniéndose en el carril, independientemente de cuál fuera."
     },
     "correct_answer": "B",
-    "image": "/images/q_282.png",
+    "image": null,
     "page": 43,
     "categories": [
       "base"
@@ -5023,7 +5023,7 @@
       "C": "A realizar cursos viales cada seis meses."
     },
     "correct_answer": "B",
-    "image": "/images/q_286.png",
+    "image": null,
     "page": 44,
     "categories": [
       "base"
@@ -5044,7 +5044,7 @@
       "C": "A una conducción que mantenga durante todo el trayecto la misma velocidad."
     },
     "correct_answer": "A",
-    "image": "/images/q_287.png",
+    "image": null,
     "page": 44,
     "categories": [
       "base"
@@ -5086,7 +5086,7 @@
       "C": "Ambas respuestas, A y B, son correctas."
     },
     "correct_answer": "C",
-    "image": "/images/q_289.png",
+    "image": null,
     "page": 44,
     "categories": [
       "base"
@@ -5107,7 +5107,7 @@
       "C": "Sólo dejar el motor encendido."
     },
     "correct_answer": "B",
-    "image": null,
+    "image": "/images/q_290.png",
     "page": 44,
     "categories": [
       "base"
@@ -5128,7 +5128,7 @@
       "C": "Para comprobar la presión del aceite y del líquido de frenos."
     },
     "correct_answer": "B",
-    "image": null,
+    "image": "/images/q_291.png",
     "page": 44,
     "categories": [
       "base"
@@ -5149,7 +5149,7 @@
       "C": "Opción C."
     },
     "correct_answer": "C",
-    "image": null,
+    "image": "/images/q_292.png",
     "page": 44,
     "categories": [
       "base"
@@ -5800,7 +5800,7 @@
       "C": "Indica que el carril sobre el que se encuentra la señal es de uso exclusivo para"
     },
     "correct_answer": "B",
-    "image": "/images/q_325.png",
+    "image": null,
     "page": 49,
     "categories": [
       "base"
@@ -6157,7 +6157,7 @@
       "C": "Debe estar colocada centrada respecto al eje longitudinal medio del motovehículo."
     },
     "correct_answer": "C",
-    "image": "/images/q_7.png",
+    "image": null,
     "page": 54,
     "categories": [
       "A"
@@ -6199,7 +6199,7 @@
       "C": "Si se realiza dentro de los 60 días hábiles de efectuada la verificación."
     },
     "correct_answer": "C",
-    "image": "/images/q_15.png",
+    "image": null,
     "page": 55,
     "categories": [
       "A"
@@ -6283,7 +6283,7 @@
       "C": "Opción C."
     },
     "correct_answer": "C",
-    "image": "/images/q_66.png",
+    "image": null,
     "page": 63,
     "categories": [
       "A"
@@ -6304,7 +6304,7 @@
       "C": "No, está prohibido."
     },
     "correct_answer": "C",
-    "image": "/images/q_75.png",
+    "image": null,
     "page": 64,
     "categories": [
       "A"
@@ -6367,7 +6367,7 @@
       "C": "Queden sujetas, sin tacón ni cordones."
     },
     "correct_answer": "C",
-    "image": "/images/q_90.png",
+    "image": null,
     "page": 66,
     "categories": [
       "A"
@@ -6388,7 +6388,7 @@
       "C": "Igual para el conductor y el acompañante, porque la posibilidad de lesiones es idéntica en ambos."
     },
     "correct_answer": "C",
-    "image": "/images/q_99.png",
+    "image": null,
     "page": 67,
     "categories": [
       "A"
@@ -6451,7 +6451,7 @@
       "C": "Ambas respuestas, la A y la B, son correctas."
     },
     "correct_answer": "B",
-    "image": "/images/q_126.png",
+    "image": null,
     "page": 71,
     "categories": [
       "A"
@@ -6472,7 +6472,7 @@
       "C": "Lo más avanzada posible."
     },
     "correct_answer": "B",
-    "image": "/images/q_131.png",
+    "image": null,
     "page": 71,
     "categories": [
       "A"
@@ -6556,7 +6556,7 @@
       "C": "Sí, porque es responsable de lo que respecta a ese vehículo y sus usuarios."
     },
     "correct_answer": "C",
-    "image": "/images/q_162.png",
+    "image": null,
     "page": 76,
     "categories": [
       "A"
@@ -6577,7 +6577,7 @@
       "C": "Por su tamaño, es menos visible."
     },
     "correct_answer": "C",
-    "image": "/images/q_1.png",
+    "image": null,
     "page": 95,
     "categories": [
       "C",
@@ -6600,7 +6600,7 @@
       "C": "Es indistinto."
     },
     "correct_answer": "B",
-    "image": null,
+    "image": "/images/q_44.png",
     "page": 101,
     "categories": [
       "C",
