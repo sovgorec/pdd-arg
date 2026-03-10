@@ -364,10 +364,34 @@ def run_parser(pdf_path: Path | None = None) -> list[dict]:
     return unique
 
 
+def _load_existing_translations() -> dict[int, dict]:
+    """Загрузить question_ru и answers_ru из существующего JSON, чтобы не затирать переводы."""
+    out = {}
+    if not OUTPUT_JSON.exists():
+        return out
+    try:
+        data = json.loads(OUTPUT_JSON.read_text(encoding="utf-8"))
+        for q in data:
+            if isinstance(q, dict) and "id" in q:
+                ru = q.get("question_ru") or ""
+                ar = q.get("answers_ru") or {}
+                if ru or (ar and len(ar) >= 3):
+                    out[q["id"]] = {"question_ru": ru, "answers_ru": ar}
+    except Exception:
+        pass
+    return out
+
+
 def main():
     pdf = os.environ.get("PDF_PATH") or None
     pdf_path = Path(pdf) if pdf else None
     questions = run_parser(pdf_path)
+
+    existing = _load_existing_translations()
+    for q in questions:
+        if q["id"] in existing:
+            q["question_ru"] = existing[q["id"]]["question_ru"]
+            q["answers_ru"] = existing[q["id"]]["answers_ru"]
 
     OUTPUT_JSON.parent.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
