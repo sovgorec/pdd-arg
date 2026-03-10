@@ -8,7 +8,7 @@ import { useStorage } from "@/hooks/useStorage";
 import { shuffle } from "@/lib/fisherYates";
 
 type Lang = "es" | "ru";
-const CATEGORIES = ["generales", "A", "B", "C", "D", "E"] as const;
+const CATEGORIES = ["generales", "A", "B", "C/E", "D"] as const;
 
 export default function Home() {
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -43,7 +43,12 @@ export default function Home() {
   const filteredQuestions = questions.filter((q) => {
     if (selectedCats.size > 0) {
       const cats = q.categories || [];
-      if (!cats.some((cat) => selectedCats.has(cat))) return false;
+      const matches = cats.some((cat) => {
+        if (selectedCats.has(cat)) return true;
+        if ((cat === "C" || cat === "E") && selectedCats.has("C/E")) return true;
+        return false;
+      });
+      if (!matches) return false;
     }
     if (onlyWithImages && !q.image) return false;
     if (onlyErrors && !storage.wrongIds.includes(q.id)) return false;
@@ -147,8 +152,8 @@ export default function Home() {
   const catLabel = (q: Question) => {
     const cats = q.categories || [];
     if (cats.includes("generales") && cats.length === 1) return "Generales";
-    const main = cats.find((c) => c !== "C" && c !== "E") || cats[0];
-    return CATEGORY_LABELS[main] || main;
+    if (cats.includes("C") || cats.includes("E")) return "C/E";
+    return CATEGORY_LABELS[cats[0] || ""] || cats[0] || "";
   };
 
   if (loading) {
@@ -163,6 +168,12 @@ export default function Home() {
     return (
       <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-stone-100 p-4">
         <p className="text-red-600">{error}</p>
+        <button
+          onClick={() => window.location.reload()}
+          className="rounded-lg bg-stone-800 px-6 py-3 text-white hover:bg-stone-700"
+        >
+          Перезагрузить
+        </button>
       </div>
     );
   }
@@ -171,12 +182,20 @@ export default function Home() {
     return (
       <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-stone-100 p-4">
         <p className="text-stone-900">Нет вопросов по выбранным фильтрам</p>
-        <button
-          onClick={() => setFilterOpen(true)}
-          className="rounded bg-stone-700 px-4 py-2 text-white"
-        >
-          Фильтр
-        </button>
+        <div className="flex gap-3">
+          <button
+            onClick={() => setFilterOpen(true)}
+            className="rounded-lg bg-stone-700 px-4 py-2 text-white"
+          >
+            Фильтр
+          </button>
+          <button
+            onClick={() => window.location.reload()}
+            className="rounded-lg bg-stone-800 px-6 py-3 text-white hover:bg-stone-700"
+          >
+            Перезагрузить
+          </button>
+        </div>
       </div>
     );
   }

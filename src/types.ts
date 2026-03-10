@@ -14,7 +14,6 @@ export const CATEGORY_LABELS: Record<string, string> = {
   generales: "Generales",
   A: "Категория A",
   B: "Категория B",
-  C: "Категория C",
+  "C/E": "Категория C/E",
   D: "Категория D",
-  E: "Категория E",
 };

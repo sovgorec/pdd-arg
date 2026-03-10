@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { ErrorFallback } from "@/components/ErrorFallback";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -34,7 +35,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-stone-100 text-stone-900`}
       >
-        {children}
+        <ErrorFallback>{children}</ErrorFallback>
       </body>
     </html>
   );
