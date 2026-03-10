@@ -61,6 +61,19 @@ export default function Home() {
   }, [filteredQuestions, examMode]);
 
   useEffect(() => {
+    let sid = "srv";
+    if (typeof window !== "undefined") {
+      let v = localStorage.getItem("pdd_session");
+      if (!v) {
+        v = crypto.randomUUID?.() ?? Math.random().toString(36).slice(2);
+        localStorage.setItem("pdd_session", v);
+      }
+      sid = v;
+    }
+    fetch("/api/track", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ sessionId: sid }) }).catch(() => {});
+  }, []);
+
+  useEffect(() => {
     fetch("/api/questions")
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error("Не удалось загрузить вопросы"))))
       .then((data: Question[]) => {
@@ -465,7 +478,7 @@ export default function Home() {
             )}
 
             <p className="text-center text-sm text-stone-500">
-              Возможны ошибки, которыя я найду и поправлю, если кто-то пришлет пожертвование
+              Возможны ошибки, которые я найду и поправлю, если кто-то пришлет пожертвование
             </p>
           </div>
         </>
