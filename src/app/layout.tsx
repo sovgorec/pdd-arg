@@ -15,6 +15,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "ПДД Аргентина",
   description: "Изучение экзаменационных вопросов ПДД Аргентины",
+  manifest: "/site.webmanifest",
+  appleWebApp: { capable: true, title: "ПДД AR" },
+  icons: {
+    icon: [{ url: "/icon-192.png", sizes: "192x192", type: "image/png" }],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+  },
+  themeColor: "#1c1917",
 };
 
 export default function RootLayout({
