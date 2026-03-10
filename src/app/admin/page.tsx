@@ -28,9 +28,10 @@ export default function AdminPage() {
       });
       const data = await res.json();
       if (res.ok && data.token) {
-        if (typeof window !== "undefined") sessionStorage.setItem("admin_token", data.token);
-        setNeedsLogin(false);
-        await loadStats();
+        if (typeof window !== "undefined") {
+          sessionStorage.setItem("admin_token", data.token);
+          window.location.reload();
+        }
       } else {
         setError("Неверный пароль");
       }
