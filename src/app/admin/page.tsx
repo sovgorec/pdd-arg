@@ -76,7 +76,6 @@ export default function AdminPage() {
               Войти
             </button>
         </div>
-        <p className="mt-4 text-sm text-stone-500">Пароль по умолчанию: 1234</p>
       </div>
     );
   }
