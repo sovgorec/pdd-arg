@@ -61,7 +61,12 @@ export default function Home() {
     fetch("/api/questions")
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error("Не удалось загрузить вопросы"))))
       .then((data: Question[]) => {
-        setQuestions(data.map((q) => ({ ...q, categories: q.categories || [] })));
+        const mapped = data.map((q) => ({ ...q, categories: q.categories || [] }));
+        const withoutRu = mapped.filter((q) => !q.question_ru || Object.keys(q.answers_ru || {}).length < 3);
+        if (withoutRu.length > 0) {
+          console.warn(`[PDD] ${withoutRu.length} вопросов без перевода (question_ru/answers_ru). Запустите ./translate.sh`);
+        }
+        setQuestions(mapped);
         setError(null);
       })
       .catch((e) => setError(e?.message || "Ошибка"))
@@ -214,9 +219,7 @@ export default function Home() {
             )}
 
             <p className="mb-6 text-lg leading-relaxed text-stone-900">
-              {lang === "ru" && current?.question_ru
-                ? current.question_ru
-                : current?.question_original}
+              {lang === "ru" ? (current?.question_ru || current?.question_original || "") : (current?.question_original || "")}
             </p>
           </div>
         </div>
@@ -230,9 +233,9 @@ export default function Home() {
             {["A", "B", "C"].map((letter) => {
               if (!current) return null;
               const text =
-                lang === "ru" && current.answers_ru?.[letter]
-                  ? current.answers_ru[letter]
-                  : current.answers_original[letter];
+                lang === "ru"
+                  ? (current.answers_ru?.[letter] || current.answers_original[letter] || "")
+                  : (current.answers_original[letter] || "");
               const isCorrect = current.correct_answer === letter;
               const isSelected = selected === letter;
               const showResult = answered && (isCorrect || isSelected);
@@ -270,26 +273,29 @@ export default function Home() {
             </button>
           )}
 
-          {/* Переключатель языка */}
+          {/* Переключатель языка — вся кнопка кликабельна, toggle */}
           <div className="mt-4 flex justify-center">
-            <div className="relative flex rounded-xl bg-stone-200/60 p-1">
+            <button
+              type="button"
+              onClick={() => setLang((l) => (l === "ru" ? "es" : "ru"))}
+              className="relative flex w-full max-w-[208px] cursor-pointer rounded-xl bg-stone-200/60 p-1"
+              aria-label="Переключить язык"
+            >
               <div
                 className="absolute top-1 h-[calc(100%-8px)] rounded-lg bg-stone-800 shadow-md transition-all duration-300 ease-out"
                 style={{ width: "calc(50% - 4px)", left: lang === "ru" ? "4px" : "calc(50% + 0px)" }}
               />
-              <button
-                onClick={() => setLang("ru")}
-                className={`relative z-10 w-24 rounded-lg px-4 py-2.5 text-sm font-medium ${lang === "ru" ? "text-white" : "text-stone-700"}`}
+              <span
+                className={`relative z-10 flex-1 rounded-lg px-4 py-2.5 text-center text-sm font-medium ${lang === "ru" ? "text-white" : "text-stone-700"}`}
               >
                 Русский
-              </button>
-              <button
-                onClick={() => setLang("es")}
-                className={`relative z-10 w-24 rounded-lg px-4 py-2.5 text-sm font-medium ${lang === "es" ? "text-white" : "text-stone-700"}`}
+              </span>
+              <span
+                className={`relative z-10 flex-1 rounded-lg px-4 py-2.5 text-center text-sm font-medium ${lang === "es" ? "text-white" : "text-stone-700"}`}
               >
                 Español
-              </button>
-            </div>
+              </span>
+            </button>
           </div>
         </div>
       </div>

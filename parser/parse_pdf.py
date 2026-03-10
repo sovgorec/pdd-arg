@@ -20,29 +20,22 @@ IMAGES_DIR = PROJECT_ROOT / "images"
 MIN_IMAGE_HEIGHT = 40
 MAX_IMAGE_X_FOR_CONTENT = 200  # левее — контентное изображение
 
-# Категории по страницам PDF (0-indexed). PDF page 0 = стр 1
-CATEGORY_RANGES = [
-    ("base", 0, 51),    # стр 1–52
-    ("A", 52, 75),      # стр 53–76
-    ("B", 76, 93),      # стр 77–94
-    ("C", 94, 104),     # C/G/E стр 95–105
-    ("G", 94, 104),
-    ("E", 94, 104),
-    ("D", 105, 999),    # D со стр 106 до конца
-]
-
-
-def get_categories_for_page(page_num_0: int) -> list[str]:
-    """Вернуть категории для страницы (0-indexed)."""
-    result = []
-    for cat, start, end in CATEGORY_RANGES:
-        if start <= page_num_0 <= end:
-            if cat in ("C", "G", "E"):
-                if "C" not in result:
-                    result.extend(["C", "G", "E"])
-            else:
-                result.append(cat)
-    return result if result else ["base"]
+# Категории по номерам страниц PDF (1-based)
+# Base: 1–52, A: 53–76, B: 77–94, C/G/E: 95–106, D: 107+
+def get_categories_for_page(pdf_page_1based: int) -> list[str]:
+    """Вернуть категории по номеру страницы PDF (1-based)."""
+    p = pdf_page_1based
+    if 1 <= p <= 52:
+        return ["base"]
+    if 53 <= p <= 76:
+        return ["A"]
+    if 77 <= p <= 94:
+        return ["B"]
+    if 95 <= p <= 106:
+        return ["C", "G", "E"]
+    if p >= 107:
+        return ["D"]
+    return ["base"]
 
 
 def find_pdf() -> Path:
@@ -247,30 +240,27 @@ def image_near_question(
     ans_bbox: tuple | None,
 ) -> bool:
     """
-    Тип 1: [IMG] [вопрос] — слева от текста
-    Тип 2: вопрос, [IMG] [A B C] — между вопросом и ответами
-    Тип 3: вопрос, [IMG], A B C — ниже вопроса
+    Изображение привязано к вопросу если:
+    1) слева от вопроса  2) между вопросом и ответами  3) ниже вопроса
     """
     ix0, iy0, ix1, iy1 = img_bbox
     qx0, qy0, qx1, qy1 = q_bbox
     img_cy = (iy0 + iy1) / 2
-    q_cy = (qy0 + qy1) / 2
-    q_height = qy1 - qy0
 
-    # Вертикальная близость (центр изображения рядом с блоком вопроса)
-    vert_overlap = abs(img_cy - q_cy) < max(200, q_height + 100)
+    # 1. Слева от вопроса: правая граница img левее левой границы текста + допуск
+    if ix1 < qx0 + 100:
+        return abs(img_cy - (qy0 + qy1) / 2) < 220
 
-    # Слева от текста (тип 1)
-    if ix1 < qx0 + 80 and vert_overlap:
-        return True
-    # Между вопросом и ответами (тип 2)
+    # 2. Между вопросом и ответами
     if ans_bbox:
         ay0 = ans_bbox[1]
-        if qy1 - 30 < img_cy < ay0 + 80 and ix0 < qx1 + 150:
+        if qy1 <= img_cy <= ay0 + 120 and ix0 < qx1 + 200:
             return True
-    # Ниже/на уровне вопроса, слева (тип 3)
-    if iy0 >= qy0 - 80 and iy1 <= qy1 + 350 and ix0 < 250:
+
+    # 3. Ниже вопроса (в пределах блока)
+    if iy0 >= qy0 - 50 and iy1 <= qy1 + 400 and ix0 < 280:
         return True
+
     return False
 
 
@@ -320,11 +310,10 @@ def run_parser(pdf_path: Path | None = None) -> list[dict]:
         spans = collect_spans_from_page(page)
         questions = extract_questions_with_bboxes(spans)
 
-        # page_num 0-indexed в PDF. Контент со стр 3 (индекс 2). Нумеруем контент с 1
-        content_page_0 = page_num - start_page
+        pdf_page = page_num + 1  # 1-based номер страницы PDF
         for q in questions:
-            q["page"] = page_num + 1  # печатная страница PDF
-            q["categories"] = get_categories_for_page(content_page_0)
+            q["page"] = pdf_page
+            q["categories"] = get_categories_for_page(pdf_page)
 
         page_imgs = extract_images_from_page(doc, page)
         if page_imgs:
