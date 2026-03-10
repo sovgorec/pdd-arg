@@ -27,9 +27,9 @@ export default function AdminPage() {
         body: JSON.stringify({ password }),
       });
       const data = await res.json();
-      if (res.ok && data.token) {
+      if (res.ok && data.ok) {
         if (typeof window !== "undefined") {
-          sessionStorage.setItem("admin_token", data.token);
+          sessionStorage.setItem("admin_pwd", password.trim());
           window.location.reload();
         }
       } else {
@@ -43,9 +43,9 @@ export default function AdminPage() {
   };
 
   const loadStats = async () => {
-    const tok = typeof window !== "undefined" ? sessionStorage.getItem("admin_token") : "";
+    const pwd = typeof window !== "undefined" ? sessionStorage.getItem("admin_pwd") : "";
     const res = await fetch("/api/analytics", {
-      headers: tok ? { Authorization: `Bearer ${tok}` } : {},
+      headers: pwd ? { "X-Admin-Password": pwd } : {},
     });
     if (res.ok) {
       const data = await res.json();
