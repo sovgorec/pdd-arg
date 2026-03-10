@@ -22,6 +22,7 @@ export default function Home() {
   const [answered, setAnswered] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
   const [filterOpen, setFilterOpen] = useState(false);
+  const [profileOpen, setProfileOpen] = useState(false);
   const [selectedCats, setSelectedCats] = useState<Set<string>>(new Set(["generales"]));
   const [onlyWithImages, setOnlyWithImages] = useState(false);
   const [onlyErrors, setOnlyErrors] = useState(false);
@@ -119,6 +120,14 @@ export default function Home() {
     buildOrder();
   };
 
+  const copyToClipboard = useCallback(async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch {
+      // ignore
+    }
+  }, []);
+
   const catLabel = (q: Question) => {
     const cats = q.categories || [];
     if (cats.includes("generales") && cats.length === 1) return "Generales";
@@ -183,6 +192,16 @@ export default function Home() {
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+              </svg>
+            </button>
+            <button
+              onClick={() => setProfileOpen(true)}
+              className="rounded-full p-2 bg-black text-white hover:bg-stone-800"
+              title="Профиль"
+              aria-label="Профиль"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
               </svg>
             </button>
           </div>
@@ -369,6 +388,78 @@ export default function Home() {
             >
               Готово
             </button>
+          </div>
+        </>
+      )}
+
+      {/* Профиль: шторка снизу */}
+      {profileOpen && (
+        <>
+          <div
+            className="fixed inset-0 z-40 bg-black/40"
+            onClick={() => setProfileOpen(false)}
+            aria-hidden
+          />
+          <div className="fixed bottom-0 left-0 right-0 z-50 max-h-[85vh] overflow-y-auto rounded-t-2xl bg-white p-6 shadow-xl">
+            <div className="mb-4 flex items-center justify-between">
+              <h3 className="text-lg font-semibold text-stone-900">Профиль</h3>
+              <button
+                onClick={() => setProfileOpen(false)}
+                className="rounded p-1 text-stone-500 hover:bg-stone-100"
+              >
+                ✕
+              </button>
+            </div>
+
+            <section className="mb-6">
+              <h4 className="mb-2 text-sm font-medium text-stone-700">Как установить приложение</h4>
+              <p className="mb-2 text-sm text-stone-600">
+                <strong>iPhone (Safari):</strong> нажмите кнопку «Поделиться» внизу экрана → «На экран „Домой“».
+              </p>
+              <p className="text-sm text-stone-600">
+                <strong>Android (Chrome):</strong> меню (три точки) → «Установить приложение» или «Добавить на главный экран».
+              </p>
+            </section>
+
+            <section className="mb-4">
+              <p className="mb-2 text-sm text-stone-600">Мой алиас</p>
+              <div className="flex items-center gap-2 rounded-lg border border-stone-200 bg-stone-50 px-3 py-2">
+                <span className="min-w-0 flex-1 truncate text-stone-900">sovgorec</span>
+                <button
+                  type="button"
+                  onClick={() => copyToClipboard("sovgorec")}
+                  className="flex-shrink-0 rounded p-1.5 text-stone-500 hover:bg-stone-200"
+                  title="Копировать"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+                    <path d="M4 16V4a2 2 0 0 1 2-2h12" />
+                  </svg>
+                </button>
+              </div>
+            </section>
+
+            <section className="mb-6">
+              <p className="mb-2 text-sm text-stone-600">Мой Bybit UID</p>
+              <div className="flex items-center gap-2 rounded-lg border border-stone-200 bg-stone-50 px-3 py-2">
+                <span className="min-w-0 flex-1 truncate font-mono text-sm text-stone-900">107944611</span>
+                <button
+                  type="button"
+                  onClick={() => copyToClipboard("sovgorec.pdd-arg")}
+                  className="flex-shrink-0 rounded p-1.5 text-stone-500 hover:bg-stone-200"
+                  title="Копировать"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+                    <path d="M4 16V4a2 2 0 0 1 2-2h12" />
+                  </svg>
+                </button>
+              </div>
+            </section>
+
+            <p className="text-center text-sm text-stone-500">
+              Возможны ошибки, которыя я найду и поправлю, если кто-то пришлет пожертвование
+            </p>
           </div>
         </>
       )}
