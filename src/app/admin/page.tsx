@@ -44,9 +44,8 @@ export default function AdminPage() {
 
   const loadStats = async () => {
     const pwd = typeof window !== "undefined" ? sessionStorage.getItem("admin_pwd") : "";
-    const res = await fetch("/api/analytics", {
-      headers: pwd ? { "X-Admin-Password": pwd } : {},
-    });
+    const url = pwd ? `/api/analytics?p=${encodeURIComponent(pwd)}` : "/api/analytics";
+    const res = await fetch(url);
     if (res.ok) {
       const data = await res.json();
       setStats(data);

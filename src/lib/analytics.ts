@@ -11,16 +11,18 @@ async function ensureFile(): Promise<Visit[]> {
     const raw = await readFile(FILE, "utf-8");
     return JSON.parse(raw);
   } catch {
-    await mkdir(DATA_DIR, { recursive: true });
-    await writeFile(FILE, "[]", "utf-8");
     return [];
   }
 }
 
 export async function appendVisit(v: Visit): Promise<void> {
-  const visits = await ensureFile();
-  visits.push(v);
-  await writeFile(FILE, JSON.stringify(visits), "utf-8");
+  try {
+    const visits = await ensureFile();
+    visits.push(v);
+    await writeFile(FILE, JSON.stringify(visits), "utf-8");
+  } catch {
+    // Vercel: read-only fs, skip
+  }
 }
 
 export async function getVisits(): Promise<Visit[]> {
